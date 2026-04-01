@@ -80,7 +80,7 @@ clean:
 
 flash: all
 	@echo "[FLASH] Loading code by OpenOCD ..."
-	openocd -f interface/stlink.cfg -f target/stm32f1.cfg -c "program $(BUILD_DIR)/$(TARGET).elf verify reset exit"
+	openocd -f interface/stlink.cfg -f target/stm32f1x.cfg -c "program $(BUILD_DIR)/$(TARGET).elf verify reset exit"
 
 -include $(wildcard $(BUILD_DIR)/**/*.d)
 

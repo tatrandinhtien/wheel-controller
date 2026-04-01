@@ -34,6 +34,15 @@
  extern "C" {
 #endif 
 
+#include "stm32f103xb.h"
+#include <stddef.h>
+#include <stdint.h>
+#include <stdbool.h>
+
+#ifndef RESET
+#define RESET 0U
+#endif
+
 /** @addtogroup STM32F10x_System_Includes
   * @{
   */

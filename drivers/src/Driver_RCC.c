@@ -16,7 +16,7 @@
  * @brief Configure the SYSCLK up to 72 Mhz
  *
  */
-int RCC_SystemClock_72Mhz(void)
+int32_t RCC_SystemClock_72Mhz(void)
 {
     int res = ARM_DRIVER_OK;
 

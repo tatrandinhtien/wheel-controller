@@ -132,7 +132,6 @@ reset_bss_loop:
 	cmp r1, r2
 	bcc reset_bss
 
-	bl __libc_init_array
 	bl main
 
 .size Reset_Handler, .-Reset_Handler
