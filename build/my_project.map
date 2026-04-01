@@ -1,0 +1,2085 @@
+Archive member included to satisfy reference by file (symbol)
+
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-atexit.o)
+                              /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o (atexit)
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-exit.o)
+                              /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o (exit)
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-fini.o)
+                              /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o (__libc_fini_array)
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-impure.o)
+                              /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-exit.o) (_global_impure_ptr)
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-init.o)
+                              /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o (__libc_init_array)
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memcpy.o)
+                              build/os/FreeRTOS/queue.o (memcpy)
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memset.o)
+                              /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o (memset)
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__atexit.o)
+                              /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-atexit.o) (__register_exitproc)
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__call_atexit.o)
+                              /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-exit.o) (__call_exitprocs)
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crti.o
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crti.o
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crti.o
+ .data          0x0000000000000000        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+ .rodata        0x0000000000000000       0x24 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+ .text          0x0000000000000000       0x70 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+ .ARM.extab     0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+ .ARM.exidx     0x0000000000000000       0x10 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+ .debug_line    0x0000000000000000       0x87 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+ .debug_info    0x0000000000000000       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+ .debug_abbrev  0x0000000000000000       0x14 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+ .debug_aranges
+                0x0000000000000000       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+ .debug_str     0x0000000000000000       0x94 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+ .ARM.attributes
+                0x0000000000000000       0x1b /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+ .group         0x0000000000000000        0xc build/app/src/main.o
+ .text          0x0000000000000000        0x0 build/app/src/main.o
+ .data          0x0000000000000000        0x0 build/app/src/main.o
+ .bss           0x0000000000000000        0x0 build/app/src/main.o
+ .group         0x0000000000000000        0xc build/bsp/src/servo.o
+ .text          0x0000000000000000        0x0 build/bsp/src/servo.o
+ .data          0x0000000000000000        0x0 build/bsp/src/servo.o
+ .bss           0x0000000000000000        0x0 build/bsp/src/servo.o
+ .debug_info    0x0000000000000000       0x21 build/bsp/src/servo.o
+ .debug_abbrev  0x0000000000000000       0x13 build/bsp/src/servo.o
+ .debug_aranges
+                0x0000000000000000       0x18 build/bsp/src/servo.o
+ .debug_macro   0x0000000000000000       0x11 build/bsp/src/servo.o
+ .debug_macro   0x0000000000000000      0xa5a build/bsp/src/servo.o
+ .debug_line    0x0000000000000000       0x30 build/bsp/src/servo.o
+ .debug_str     0x0000000000000000     0x2c3a build/bsp/src/servo.o
+ .comment       0x0000000000000000       0x34 build/bsp/src/servo.o
+ .ARM.attributes
+                0x0000000000000000       0x33 build/bsp/src/servo.o
+ .group         0x0000000000000000        0xc build/bsp/src/h_bridge.o
+ .text          0x0000000000000000        0x0 build/bsp/src/h_bridge.o
+ .data          0x0000000000000000        0x0 build/bsp/src/h_bridge.o
+ .bss           0x0000000000000000        0x0 build/bsp/src/h_bridge.o
+ .debug_info    0x0000000000000000       0x21 build/bsp/src/h_bridge.o
+ .debug_abbrev  0x0000000000000000       0x13 build/bsp/src/h_bridge.o
+ .debug_aranges
+                0x0000000000000000       0x18 build/bsp/src/h_bridge.o
+ .debug_macro   0x0000000000000000       0x11 build/bsp/src/h_bridge.o
+ .debug_macro   0x0000000000000000      0xa5a build/bsp/src/h_bridge.o
+ .debug_line    0x0000000000000000       0x33 build/bsp/src/h_bridge.o
+ .debug_str     0x0000000000000000     0x2c3d build/bsp/src/h_bridge.o
+ .comment       0x0000000000000000       0x34 build/bsp/src/h_bridge.o
+ .ARM.attributes
+                0x0000000000000000       0x33 build/bsp/src/h_bridge.o
+ .group         0x0000000000000000        0xc build/bsp/src/encoder.o
+ .text          0x0000000000000000        0x0 build/bsp/src/encoder.o
+ .data          0x0000000000000000        0x0 build/bsp/src/encoder.o
+ .bss           0x0000000000000000        0x0 build/bsp/src/encoder.o
+ .debug_info    0x0000000000000000       0x21 build/bsp/src/encoder.o
+ .debug_abbrev  0x0000000000000000       0x13 build/bsp/src/encoder.o
+ .debug_aranges
+                0x0000000000000000       0x18 build/bsp/src/encoder.o
+ .debug_macro   0x0000000000000000       0x11 build/bsp/src/encoder.o
+ .debug_macro   0x0000000000000000      0xa5a build/bsp/src/encoder.o
+ .debug_line    0x0000000000000000       0x32 build/bsp/src/encoder.o
+ .debug_str     0x0000000000000000     0x2c3c build/bsp/src/encoder.o
+ .comment       0x0000000000000000       0x34 build/bsp/src/encoder.o
+ .ARM.attributes
+                0x0000000000000000       0x33 build/bsp/src/encoder.o
+ .group         0x0000000000000000        0xc build/drivers/src/Driver_CAN.o
+ .group         0x0000000000000000        0xc build/drivers/src/Driver_CAN.o
+ .group         0x0000000000000000        0xc build/drivers/src/Driver_CAN.o
+ .group         0x0000000000000000        0xc build/drivers/src/Driver_CAN.o
+ .group         0x0000000000000000        0xc build/drivers/src/Driver_CAN.o
+ .group         0x0000000000000000        0xc build/drivers/src/Driver_CAN.o
+ .text          0x0000000000000000        0x0 build/drivers/src/Driver_CAN.o
+ .data          0x0000000000000000        0x0 build/drivers/src/Driver_CAN.o
+ .bss           0x0000000000000000        0x0 build/drivers/src/Driver_CAN.o
+ .rodata.can_driver_version
+                0x0000000000000000        0x4 build/drivers/src/Driver_CAN.o
+ .rodata.can_driver_capabilities
+                0x0000000000000000        0x4 build/drivers/src/Driver_CAN.o
+ .rodata.can_object_capabilities
+                0x0000000000000000        0x4 build/drivers/src/Driver_CAN.o
+ .bss.can_driver_powered
+                0x0000000000000000        0x1 build/drivers/src/Driver_CAN.o
+ .bss.can_driver_initialized
+                0x0000000000000000        0x1 build/drivers/src/Driver_CAN.o
+ .bss.CAN_SignalUnitEvent
+                0x0000000000000000        0x4 build/drivers/src/Driver_CAN.o
+ .bss.CAN_SignalObjectEvent
+                0x0000000000000000        0x4 build/drivers/src/Driver_CAN.o
+ .text.ARM_CAN_GetVersion
+                0x0000000000000000       0x28 build/drivers/src/Driver_CAN.o
+ .text.ARM_CAN_GetCapabilities
+                0x0000000000000000       0x14 build/drivers/src/Driver_CAN.o
+ .text.ARM_CAN_Initialize
+                0x0000000000000000       0x40 build/drivers/src/Driver_CAN.o
+ .text.ARM_CAN_Uninitialize
+                0x0000000000000000       0x18 build/drivers/src/Driver_CAN.o
+ .text.ARM_CAN_PowerControl
+                0x0000000000000000       0x64 build/drivers/src/Driver_CAN.o
+ .text.ARM_CAN_GetClock
+                0x0000000000000000        0xe build/drivers/src/Driver_CAN.o
+ .text.ARM_CAN_SetBitrate
+                0x0000000000000000       0x2c build/drivers/src/Driver_CAN.o
+ .text.ARM_CAN_SetMode
+                0x0000000000000000       0x4c build/drivers/src/Driver_CAN.o
+ .text.ARM_CAN_ObjectGetCapabilities
+                0x0000000000000000       0x3a build/drivers/src/Driver_CAN.o
+ .text.ARM_CAN_ObjectSetFilter
+                0x0000000000000000       0x54 build/drivers/src/Driver_CAN.o
+ .text.ARM_CAN_ObjectConfigure
+                0x0000000000000000       0x4c build/drivers/src/Driver_CAN.o
+ .text.ARM_CAN_MessageSend
+                0x0000000000000000       0x2c build/drivers/src/Driver_CAN.o
+ .text.ARM_CAN_MessageRead
+                0x0000000000000000       0x2c build/drivers/src/Driver_CAN.o
+ .text.ARM_CAN_Control
+                0x0000000000000000       0x4c build/drivers/src/Driver_CAN.o
+ .text.ARM_CAN_GetStatus
+                0x0000000000000000        0xe build/drivers/src/Driver_CAN.o
+ .rodata.Driver_CAN0
+                0x0000000000000000       0x3c build/drivers/src/Driver_CAN.o
+ .debug_info    0x0000000000000000      0xa67 build/drivers/src/Driver_CAN.o
+ .debug_abbrev  0x0000000000000000      0x205 build/drivers/src/Driver_CAN.o
+ .debug_aranges
+                0x0000000000000000       0x90 build/drivers/src/Driver_CAN.o
+ .debug_ranges  0x0000000000000000       0x80 build/drivers/src/Driver_CAN.o
+ .debug_macro   0x0000000000000000       0x50 build/drivers/src/Driver_CAN.o
+ .debug_macro   0x0000000000000000      0xa5a build/drivers/src/Driver_CAN.o
+ .debug_macro   0x0000000000000000      0x16d build/drivers/src/Driver_CAN.o
+ .debug_macro   0x0000000000000000      0x34e build/drivers/src/Driver_CAN.o
+ .debug_macro   0x0000000000000000       0x22 build/drivers/src/Driver_CAN.o
+ .debug_macro   0x0000000000000000       0x34 build/drivers/src/Driver_CAN.o
+ .debug_macro   0x0000000000000000      0x150 build/drivers/src/Driver_CAN.o
+ .debug_line    0x0000000000000000      0x2db build/drivers/src/Driver_CAN.o
+ .debug_str     0x0000000000000000     0x4cbb build/drivers/src/Driver_CAN.o
+ .comment       0x0000000000000000       0x34 build/drivers/src/Driver_CAN.o
+ .debug_frame   0x0000000000000000      0x248 build/drivers/src/Driver_CAN.o
+ .ARM.attributes
+                0x0000000000000000       0x2d build/drivers/src/Driver_CAN.o
+ .group         0x0000000000000000        0xc build/drivers/src/Driver_Flash.o
+ .group         0x0000000000000000        0xc build/drivers/src/Driver_Flash.o
+ .group         0x0000000000000000        0xc build/drivers/src/Driver_Flash.o
+ .group         0x0000000000000000        0xc build/drivers/src/Driver_Flash.o
+ .group         0x0000000000000000        0xc build/drivers/src/Driver_Flash.o
+ .group         0x0000000000000000        0xc build/drivers/src/Driver_Flash.o
+ .text          0x0000000000000000        0x0 build/drivers/src/Driver_Flash.o
+ .data          0x0000000000000000        0x0 build/drivers/src/Driver_Flash.o
+ .bss           0x0000000000000000        0x0 build/drivers/src/Driver_Flash.o
+ .rodata.FlashInfo
+                0x0000000000000000       0x18 build/drivers/src/Driver_Flash.o
+ .bss.FlashStatus
+                0x0000000000000000        0x4 build/drivers/src/Driver_Flash.o
+ .rodata.DriverVersion
+                0x0000000000000000        0x4 build/drivers/src/Driver_Flash.o
+ .rodata.DriverCapabilities
+                0x0000000000000000        0x4 build/drivers/src/Driver_Flash.o
+ .text.ARM_Flash_GetVersion
+                0x0000000000000000       0x28 build/drivers/src/Driver_Flash.o
+ .text.ARM_Flash_GetCapabilities
+                0x0000000000000000        0xe build/drivers/src/Driver_Flash.o
+ .text.ARM_Flash_Initialize
+                0x0000000000000000       0x14 build/drivers/src/Driver_Flash.o
+ .text.ARM_Flash_Uninitialize
+                0x0000000000000000        0xe build/drivers/src/Driver_Flash.o
+ .text.ARM_Flash_PowerControl
+                0x0000000000000000       0x2e build/drivers/src/Driver_Flash.o
+ .text.ARM_Flash_ReadData
+                0x0000000000000000       0x18 build/drivers/src/Driver_Flash.o
+ .text.ARM_Flash_ProgramData
+                0x0000000000000000       0x18 build/drivers/src/Driver_Flash.o
+ .text.ARM_Flash_EraseSector
+                0x0000000000000000       0x14 build/drivers/src/Driver_Flash.o
+ .text.ARM_Flash_EraseChip
+                0x0000000000000000        0xe build/drivers/src/Driver_Flash.o
+ .text.ARM_Flash_GetStatus
+                0x0000000000000000       0x14 build/drivers/src/Driver_Flash.o
+ .text.ARM_Flash_GetInfo
+                0x0000000000000000       0x14 build/drivers/src/Driver_Flash.o
+ .text.ARM_Flash_SignalEvent
+                0x0000000000000000       0x12 build/drivers/src/Driver_Flash.o
+ .rodata.Driver_Flash0
+                0x0000000000000000       0x2c build/drivers/src/Driver_Flash.o
+ .debug_info    0x0000000000000000      0x622 build/drivers/src/Driver_Flash.o
+ .debug_abbrev  0x0000000000000000      0x197 build/drivers/src/Driver_Flash.o
+ .debug_aranges
+                0x0000000000000000       0x78 build/drivers/src/Driver_Flash.o
+ .debug_ranges  0x0000000000000000       0x68 build/drivers/src/Driver_Flash.o
+ .debug_macro   0x0000000000000000       0x56 build/drivers/src/Driver_Flash.o
+ .debug_macro   0x0000000000000000      0xa5a build/drivers/src/Driver_Flash.o
+ .debug_macro   0x0000000000000000      0x16d build/drivers/src/Driver_Flash.o
+ .debug_macro   0x0000000000000000      0x34e build/drivers/src/Driver_Flash.o
+ .debug_macro   0x0000000000000000       0x22 build/drivers/src/Driver_Flash.o
+ .debug_macro   0x0000000000000000       0x34 build/drivers/src/Driver_Flash.o
+ .debug_macro   0x0000000000000000       0x28 build/drivers/src/Driver_Flash.o
+ .debug_line    0x0000000000000000      0x1c2 build/drivers/src/Driver_Flash.o
+ .debug_str     0x0000000000000000     0x406e build/drivers/src/Driver_Flash.o
+ .comment       0x0000000000000000       0x34 build/drivers/src/Driver_Flash.o
+ .debug_frame   0x0000000000000000      0x1c8 build/drivers/src/Driver_Flash.o
+ .ARM.attributes
+                0x0000000000000000       0x2d build/drivers/src/Driver_Flash.o
+ .group         0x0000000000000000        0xc build/drivers/src/Driver_GPIO.o
+ .group         0x0000000000000000        0xc build/drivers/src/Driver_GPIO.o
+ .group         0x0000000000000000        0xc build/drivers/src/Driver_GPIO.o
+ .group         0x0000000000000000        0xc build/drivers/src/Driver_GPIO.o
+ .group         0x0000000000000000        0xc build/drivers/src/Driver_GPIO.o
+ .group         0x0000000000000000        0xc build/drivers/src/Driver_GPIO.o
+ .text          0x0000000000000000        0x0 build/drivers/src/Driver_GPIO.o
+ .data          0x0000000000000000        0x0 build/drivers/src/Driver_GPIO.o
+ .bss           0x0000000000000000        0x0 build/drivers/src/Driver_GPIO.o
+ .text.GPIO_Setup
+                0x0000000000000000       0x26 build/drivers/src/Driver_GPIO.o
+ .text.GPIO_SetDirection
+                0x0000000000000000       0x42 build/drivers/src/Driver_GPIO.o
+ .text.GPIO_SetOutputMode
+                0x0000000000000000       0x42 build/drivers/src/Driver_GPIO.o
+ .text.GPIO_SetPullResistor
+                0x0000000000000000       0x4e build/drivers/src/Driver_GPIO.o
+ .text.GPIO_SetEventTrigger
+                0x0000000000000000       0x54 build/drivers/src/Driver_GPIO.o
+ .text.GPIO_SetOutput
+                0x0000000000000000       0x14 build/drivers/src/Driver_GPIO.o
+ .text.GPIO_GetInput
+                0x0000000000000000       0x18 build/drivers/src/Driver_GPIO.o
+ .rodata.Driver_GPIO0
+                0x0000000000000000       0x1c build/drivers/src/Driver_GPIO.o
+ .debug_info    0x0000000000000000      0x459 build/drivers/src/Driver_GPIO.o
+ .debug_abbrev  0x0000000000000000      0x14c build/drivers/src/Driver_GPIO.o
+ .debug_aranges
+                0x0000000000000000       0x50 build/drivers/src/Driver_GPIO.o
+ .debug_ranges  0x0000000000000000       0x40 build/drivers/src/Driver_GPIO.o
+ .debug_macro   0x0000000000000000       0x56 build/drivers/src/Driver_GPIO.o
+ .debug_macro   0x0000000000000000      0xa5a build/drivers/src/Driver_GPIO.o
+ .debug_macro   0x0000000000000000      0x16d build/drivers/src/Driver_GPIO.o
+ .debug_macro   0x0000000000000000      0x34e build/drivers/src/Driver_GPIO.o
+ .debug_macro   0x0000000000000000       0x22 build/drivers/src/Driver_GPIO.o
+ .debug_macro   0x0000000000000000       0x34 build/drivers/src/Driver_GPIO.o
+ .debug_macro   0x0000000000000000       0x1c build/drivers/src/Driver_GPIO.o
+ .debug_line    0x0000000000000000      0x1d1 build/drivers/src/Driver_GPIO.o
+ .debug_str     0x0000000000000000     0x3ec7 build/drivers/src/Driver_GPIO.o
+ .comment       0x0000000000000000       0x34 build/drivers/src/Driver_GPIO.o
+ .debug_frame   0x0000000000000000      0x128 build/drivers/src/Driver_GPIO.o
+ .ARM.attributes
+                0x0000000000000000       0x2d build/drivers/src/Driver_GPIO.o
+ .group         0x0000000000000000        0xc build/drivers/src/Driver_USART.o
+ .group         0x0000000000000000        0xc build/drivers/src/Driver_USART.o
+ .group         0x0000000000000000        0xc build/drivers/src/Driver_USART.o
+ .group         0x0000000000000000        0xc build/drivers/src/Driver_USART.o
+ .group         0x0000000000000000        0xc build/drivers/src/Driver_USART.o
+ .group         0x0000000000000000        0xc build/drivers/src/Driver_USART.o
+ .text          0x0000000000000000        0x0 build/drivers/src/Driver_USART.o
+ .data          0x0000000000000000        0x0 build/drivers/src/Driver_USART.o
+ .bss           0x0000000000000000        0x0 build/drivers/src/Driver_USART.o
+ .rodata.DriverVersion
+                0x0000000000000000        0x4 build/drivers/src/Driver_USART.o
+ .rodata.DriverCapabilities
+                0x0000000000000000        0x4 build/drivers/src/Driver_USART.o
+ .text.ARM_USART_GetVersion
+                0x0000000000000000       0x28 build/drivers/src/Driver_USART.o
+ .text.ARM_USART_GetCapabilities
+                0x0000000000000000       0x12 build/drivers/src/Driver_USART.o
+ .text.ARM_USART_Initialize
+                0x0000000000000000       0x14 build/drivers/src/Driver_USART.o
+ .text.ARM_USART_Uninitialize
+                0x0000000000000000        0xe build/drivers/src/Driver_USART.o
+ .text.ARM_USART_PowerControl
+                0x0000000000000000       0x2e build/drivers/src/Driver_USART.o
+ .text.ARM_USART_Send
+                0x0000000000000000       0x16 build/drivers/src/Driver_USART.o
+ .text.ARM_USART_Receive
+                0x0000000000000000       0x16 build/drivers/src/Driver_USART.o
+ .text.ARM_USART_Transfer
+                0x0000000000000000       0x18 build/drivers/src/Driver_USART.o
+ .text.ARM_USART_GetTxCount
+                0x0000000000000000        0xe build/drivers/src/Driver_USART.o
+ .text.ARM_USART_GetRxCount
+                0x0000000000000000        0xe build/drivers/src/Driver_USART.o
+ .text.ARM_USART_Control
+                0x0000000000000000       0x16 build/drivers/src/Driver_USART.o
+ .text.ARM_USART_GetStatus
+                0x0000000000000000        0xe build/drivers/src/Driver_USART.o
+ .text.ARM_USART_SetModemControl
+                0x0000000000000000       0x16 build/drivers/src/Driver_USART.o
+ .text.ARM_USART_GetModemStatus
+                0x0000000000000000        0xe build/drivers/src/Driver_USART.o
+ .text.ARM_USART_SignalEvent
+                0x0000000000000000       0x12 build/drivers/src/Driver_USART.o
+ .rodata.Driver_USART0
+                0x0000000000000000       0x38 build/drivers/src/Driver_USART.o
+ .debug_info    0x0000000000000000      0x835 build/drivers/src/Driver_USART.o
+ .debug_abbrev  0x0000000000000000      0x1ea build/drivers/src/Driver_USART.o
+ .debug_aranges
+                0x0000000000000000       0x90 build/drivers/src/Driver_USART.o
+ .debug_ranges  0x0000000000000000       0x80 build/drivers/src/Driver_USART.o
+ .debug_macro   0x0000000000000000       0x50 build/drivers/src/Driver_USART.o
+ .debug_macro   0x0000000000000000      0xa5a build/drivers/src/Driver_USART.o
+ .debug_macro   0x0000000000000000      0x16d build/drivers/src/Driver_USART.o
+ .debug_macro   0x0000000000000000      0x34e build/drivers/src/Driver_USART.o
+ .debug_macro   0x0000000000000000       0x22 build/drivers/src/Driver_USART.o
+ .debug_macro   0x0000000000000000       0x34 build/drivers/src/Driver_USART.o
+ .debug_macro   0x0000000000000000      0x1ef build/drivers/src/Driver_USART.o
+ .debug_line    0x0000000000000000      0x1f0 build/drivers/src/Driver_USART.o
+ .debug_str     0x0000000000000000     0x4f87 build/drivers/src/Driver_USART.o
+ .comment       0x0000000000000000       0x34 build/drivers/src/Driver_USART.o
+ .debug_frame   0x0000000000000000      0x238 build/drivers/src/Driver_USART.o
+ .ARM.attributes
+                0x0000000000000000       0x2d build/drivers/src/Driver_USART.o
+ .group         0x0000000000000000        0xc build/drivers/core/src/system_stm32f1xx.o
+ .group         0x0000000000000000        0xc build/drivers/core/src/system_stm32f1xx.o
+ .group         0x0000000000000000        0xc build/drivers/core/src/system_stm32f1xx.o
+ .group         0x0000000000000000        0xc build/drivers/core/src/system_stm32f1xx.o
+ .group         0x0000000000000000        0xc build/drivers/core/src/system_stm32f1xx.o
+ .group         0x0000000000000000        0xc build/drivers/core/src/system_stm32f1xx.o
+ .group         0x0000000000000000        0xc build/drivers/core/src/system_stm32f1xx.o
+ .group         0x0000000000000000        0xc build/drivers/core/src/system_stm32f1xx.o
+ .group         0x0000000000000000        0xc build/drivers/core/src/system_stm32f1xx.o
+ .group         0x0000000000000000        0xc build/drivers/core/src/system_stm32f1xx.o
+ .text          0x0000000000000000        0x0 build/drivers/core/src/system_stm32f1xx.o
+ .data          0x0000000000000000        0x0 build/drivers/core/src/system_stm32f1xx.o
+ .bss           0x0000000000000000        0x0 build/drivers/core/src/system_stm32f1xx.o
+ .data.SystemCoreClock
+                0x0000000000000000        0x4 build/drivers/core/src/system_stm32f1xx.o
+ .rodata.AHBPrescTable
+                0x0000000000000000       0x10 build/drivers/core/src/system_stm32f1xx.o
+ .rodata.APBPrescTable
+                0x0000000000000000        0x8 build/drivers/core/src/system_stm32f1xx.o
+ .text.SystemCoreClockUpdate
+                0x0000000000000000       0xe4 build/drivers/core/src/system_stm32f1xx.o
+ .debug_macro   0x0000000000000000      0xa5a build/drivers/core/src/system_stm32f1xx.o
+ .debug_macro   0x0000000000000000      0x34e build/drivers/core/src/system_stm32f1xx.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/croutine.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/croutine.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/croutine.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/croutine.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/croutine.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/croutine.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/croutine.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/croutine.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/croutine.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/croutine.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/croutine.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/croutine.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/croutine.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/croutine.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/croutine.o
+ .text          0x0000000000000000        0x0 build/os/FreeRTOS/croutine.o
+ .data          0x0000000000000000        0x0 build/os/FreeRTOS/croutine.o
+ .bss           0x0000000000000000        0x0 build/os/FreeRTOS/croutine.o
+ .debug_info    0x0000000000000000       0x6f build/os/FreeRTOS/croutine.o
+ .debug_abbrev  0x0000000000000000       0x29 build/os/FreeRTOS/croutine.o
+ .debug_aranges
+                0x0000000000000000       0x18 build/os/FreeRTOS/croutine.o
+ .debug_macro   0x0000000000000000       0x9f build/os/FreeRTOS/croutine.o
+ .debug_macro   0x0000000000000000      0xa5a build/os/FreeRTOS/croutine.o
+ .debug_macro   0x0000000000000000      0x16d build/os/FreeRTOS/croutine.o
+ .debug_macro   0x0000000000000000      0x34e build/os/FreeRTOS/croutine.o
+ .debug_macro   0x0000000000000000       0x16 build/os/FreeRTOS/croutine.o
+ .debug_macro   0x0000000000000000       0xb2 build/os/FreeRTOS/croutine.o
+ .debug_macro   0x0000000000000000       0x3a build/os/FreeRTOS/croutine.o
+ .debug_macro   0x0000000000000000      0x182 build/os/FreeRTOS/croutine.o
+ .debug_macro   0x0000000000000000       0xe7 build/os/FreeRTOS/croutine.o
+ .debug_macro   0x0000000000000000       0x3a build/os/FreeRTOS/croutine.o
+ .debug_macro   0x0000000000000000       0x1f build/os/FreeRTOS/croutine.o
+ .debug_macro   0x0000000000000000       0x12 build/os/FreeRTOS/croutine.o
+ .debug_macro   0x0000000000000000     0x1144 build/os/FreeRTOS/croutine.o
+ .debug_macro   0x0000000000000000       0xc3 build/os/FreeRTOS/croutine.o
+ .debug_macro   0x0000000000000000      0x161 build/os/FreeRTOS/croutine.o
+ .debug_macro   0x0000000000000000       0x49 build/os/FreeRTOS/croutine.o
+ .debug_line    0x0000000000000000      0x153 build/os/FreeRTOS/croutine.o
+ .debug_str     0x0000000000000000     0xebd0 build/os/FreeRTOS/croutine.o
+ .comment       0x0000000000000000       0x34 build/os/FreeRTOS/croutine.o
+ .ARM.attributes
+                0x0000000000000000       0x33 build/os/FreeRTOS/croutine.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/event_groups.o
+ .text          0x0000000000000000        0x0 build/os/FreeRTOS/event_groups.o
+ .data          0x0000000000000000        0x0 build/os/FreeRTOS/event_groups.o
+ .bss           0x0000000000000000        0x0 build/os/FreeRTOS/event_groups.o
+ .text.xEventGroupCreate
+                0x0000000000000000       0x2e build/os/FreeRTOS/event_groups.o
+ .text.xEventGroupSync
+                0x0000000000000000       0xf0 build/os/FreeRTOS/event_groups.o
+ .text.xEventGroupWaitBits
+                0x0000000000000000      0x114 build/os/FreeRTOS/event_groups.o
+ .text.xEventGroupClearBits
+                0x0000000000000000       0x34 build/os/FreeRTOS/event_groups.o
+ .text.xEventGroupGetBitsFromISR
+                0x0000000000000000       0x46 build/os/FreeRTOS/event_groups.o
+ .text.xEventGroupSetBits
+                0x0000000000000000       0xde build/os/FreeRTOS/event_groups.o
+ .text.vEventGroupDelete
+                0x0000000000000000       0x40 build/os/FreeRTOS/event_groups.o
+ .text.vEventGroupSetBitsCallback
+                0x0000000000000000       0x1a build/os/FreeRTOS/event_groups.o
+ .text.vEventGroupClearBitsCallback
+                0x0000000000000000       0x1a build/os/FreeRTOS/event_groups.o
+ .text.prvTestWaitCondition
+                0x0000000000000000       0x42 build/os/FreeRTOS/event_groups.o
+ .debug_info    0x0000000000000000      0x6fa build/os/FreeRTOS/event_groups.o
+ .debug_abbrev  0x0000000000000000      0x1ce build/os/FreeRTOS/event_groups.o
+ .debug_aranges
+                0x0000000000000000       0x68 build/os/FreeRTOS/event_groups.o
+ .debug_ranges  0x0000000000000000       0x58 build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000      0x19d build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000      0xa5a build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000       0x18 build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000       0x22 build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000       0x52 build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000       0x5c build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000       0x35 build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000       0x34 build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000       0x16 build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000      0x10e build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000       0x86 build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000       0x16 build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000       0x43 build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000       0x57 build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000       0x34 build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000       0x10 build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000       0x52 build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000      0x182 build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000      0x356 build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000       0x22 build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000      0x34e build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000       0x16 build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000       0xb2 build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000       0x3a build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000      0x182 build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000       0xe7 build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000       0x3a build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000       0x1f build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000       0x12 build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000     0x1144 build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000       0xc3 build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000      0x161 build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000       0x98 build/os/FreeRTOS/event_groups.o
+ .debug_macro   0x0000000000000000       0x23 build/os/FreeRTOS/event_groups.o
+ .debug_line    0x0000000000000000      0x542 build/os/FreeRTOS/event_groups.o
+ .debug_str     0x0000000000000000    0x11e76 build/os/FreeRTOS/event_groups.o
+ .comment       0x0000000000000000       0x34 build/os/FreeRTOS/event_groups.o
+ .debug_frame   0x0000000000000000      0x180 build/os/FreeRTOS/event_groups.o
+ .ARM.attributes
+                0x0000000000000000       0x2d build/os/FreeRTOS/event_groups.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/list.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/list.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/list.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/list.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/list.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/list.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/list.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/list.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/list.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/list.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/list.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/list.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/list.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/list.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/list.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/list.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/list.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/list.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/list.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/list.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/list.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/list.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/list.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/list.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/list.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/list.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/list.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/list.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/list.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/list.o
+ .text          0x0000000000000000        0x0 build/os/FreeRTOS/list.o
+ .data          0x0000000000000000        0x0 build/os/FreeRTOS/list.o
+ .bss           0x0000000000000000        0x0 build/os/FreeRTOS/list.o
+ .text.vListInitialise
+                0x0000000000000000       0x3e build/os/FreeRTOS/list.o
+ .text.vListInitialiseItem
+                0x0000000000000000       0x18 build/os/FreeRTOS/list.o
+ .text.vListInsertEnd
+                0x0000000000000000       0x46 build/os/FreeRTOS/list.o
+ .text.vListInsert
+                0x0000000000000000       0x70 build/os/FreeRTOS/list.o
+ .text.uxListRemove
+                0x0000000000000000       0x52 build/os/FreeRTOS/list.o
+ .debug_info    0x0000000000000000      0x2b9 build/os/FreeRTOS/list.o
+ .debug_abbrev  0x0000000000000000       0xeb build/os/FreeRTOS/list.o
+ .debug_aranges
+                0x0000000000000000       0x40 build/os/FreeRTOS/list.o
+ .debug_ranges  0x0000000000000000       0x30 build/os/FreeRTOS/list.o
+ .debug_macro   0x0000000000000000      0x168 build/os/FreeRTOS/list.o
+ .debug_macro   0x0000000000000000      0xa5a build/os/FreeRTOS/list.o
+ .debug_macro   0x0000000000000000       0x18 build/os/FreeRTOS/list.o
+ .debug_macro   0x0000000000000000       0x22 build/os/FreeRTOS/list.o
+ .debug_macro   0x0000000000000000       0x52 build/os/FreeRTOS/list.o
+ .debug_macro   0x0000000000000000       0x5c build/os/FreeRTOS/list.o
+ .debug_macro   0x0000000000000000       0x35 build/os/FreeRTOS/list.o
+ .debug_macro   0x0000000000000000       0x34 build/os/FreeRTOS/list.o
+ .debug_macro   0x0000000000000000       0x16 build/os/FreeRTOS/list.o
+ .debug_macro   0x0000000000000000      0x10e build/os/FreeRTOS/list.o
+ .debug_macro   0x0000000000000000       0x86 build/os/FreeRTOS/list.o
+ .debug_macro   0x0000000000000000       0x16 build/os/FreeRTOS/list.o
+ .debug_macro   0x0000000000000000       0x43 build/os/FreeRTOS/list.o
+ .debug_macro   0x0000000000000000       0x57 build/os/FreeRTOS/list.o
+ .debug_macro   0x0000000000000000       0x34 build/os/FreeRTOS/list.o
+ .debug_macro   0x0000000000000000       0x10 build/os/FreeRTOS/list.o
+ .debug_macro   0x0000000000000000       0x52 build/os/FreeRTOS/list.o
+ .debug_macro   0x0000000000000000      0x182 build/os/FreeRTOS/list.o
+ .debug_macro   0x0000000000000000      0x356 build/os/FreeRTOS/list.o
+ .debug_macro   0x0000000000000000       0x22 build/os/FreeRTOS/list.o
+ .debug_macro   0x0000000000000000      0x34e build/os/FreeRTOS/list.o
+ .debug_macro   0x0000000000000000       0x16 build/os/FreeRTOS/list.o
+ .debug_macro   0x0000000000000000       0xb2 build/os/FreeRTOS/list.o
+ .debug_macro   0x0000000000000000       0x3a build/os/FreeRTOS/list.o
+ .debug_macro   0x0000000000000000      0x182 build/os/FreeRTOS/list.o
+ .debug_macro   0x0000000000000000       0xe7 build/os/FreeRTOS/list.o
+ .debug_macro   0x0000000000000000       0x3a build/os/FreeRTOS/list.o
+ .debug_macro   0x0000000000000000       0x1f build/os/FreeRTOS/list.o
+ .debug_macro   0x0000000000000000       0x12 build/os/FreeRTOS/list.o
+ .debug_macro   0x0000000000000000     0x1144 build/os/FreeRTOS/list.o
+ .debug_macro   0x0000000000000000       0xc3 build/os/FreeRTOS/list.o
+ .debug_line    0x0000000000000000      0x35d build/os/FreeRTOS/list.o
+ .debug_str     0x0000000000000000     0xfcc5 build/os/FreeRTOS/list.o
+ .comment       0x0000000000000000       0x34 build/os/FreeRTOS/list.o
+ .debug_frame   0x0000000000000000       0xd8 build/os/FreeRTOS/list.o
+ .ARM.attributes
+                0x0000000000000000       0x2d build/os/FreeRTOS/list.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/queue.o
+ .text          0x0000000000000000        0x0 build/os/FreeRTOS/queue.o
+ .data          0x0000000000000000        0x0 build/os/FreeRTOS/queue.o
+ .bss           0x0000000000000000        0x0 build/os/FreeRTOS/queue.o
+ .text.xQueueGenericReset
+                0x0000000000000000       0xe8 build/os/FreeRTOS/queue.o
+ .text.xQueueGenericCreate
+                0x0000000000000000       0x7e build/os/FreeRTOS/queue.o
+ .text.prvInitialiseNewQueue
+                0x0000000000000000       0x3e build/os/FreeRTOS/queue.o
+ .text.xQueueGenericSend
+                0x0000000000000000      0x154 build/os/FreeRTOS/queue.o
+ .text.xQueueGenericSendFromISR
+                0x0000000000000000       0xca build/os/FreeRTOS/queue.o
+ .text.xQueueGiveFromISR
+                0x0000000000000000       0xb8 build/os/FreeRTOS/queue.o
+ .text.xQueueReceive
+                0x0000000000000000      0x144 build/os/FreeRTOS/queue.o
+ .text.xQueueSemaphoreTake
+                0x0000000000000000      0x13c build/os/FreeRTOS/queue.o
+ .text.xQueuePeek
+                0x0000000000000000      0x148 build/os/FreeRTOS/queue.o
+ .text.xQueueReceiveFromISR
+                0x0000000000000000       0xc2 build/os/FreeRTOS/queue.o
+ .text.xQueuePeekFromISR
+                0x0000000000000000       0x66 build/os/FreeRTOS/queue.o
+ .text.uxQueueMessagesWaiting
+                0x0000000000000000       0x20 build/os/FreeRTOS/queue.o
+ .text.uxQueueSpacesAvailable
+                0x0000000000000000       0x2a build/os/FreeRTOS/queue.o
+ .text.uxQueueMessagesWaitingFromISR
+                0x0000000000000000       0x1e build/os/FreeRTOS/queue.o
+ .text.vQueueDelete
+                0x0000000000000000       0x1a build/os/FreeRTOS/queue.o
+ .text.uxQueueGetQueueItemSize
+                0x0000000000000000       0x16 build/os/FreeRTOS/queue.o
+ .text.uxQueueGetQueueLength
+                0x0000000000000000       0x16 build/os/FreeRTOS/queue.o
+ .text.prvCopyDataToQueue
+                0x0000000000000000       0xb8 build/os/FreeRTOS/queue.o
+ .text.prvCopyDataFromQueue
+                0x0000000000000000       0x4c build/os/FreeRTOS/queue.o
+ .text.prvUnlockQueue
+                0x0000000000000000       0xa4 build/os/FreeRTOS/queue.o
+ .text.prvIsQueueEmpty
+                0x0000000000000000       0x2c build/os/FreeRTOS/queue.o
+ .text.xQueueIsQueueEmptyFromISR
+                0x0000000000000000       0x2a build/os/FreeRTOS/queue.o
+ .text.prvIsQueueFull
+                0x0000000000000000       0x30 build/os/FreeRTOS/queue.o
+ .text.xQueueIsQueueFullFromISR
+                0x0000000000000000       0x2e build/os/FreeRTOS/queue.o
+ .debug_info    0x0000000000000000      0xedc build/os/FreeRTOS/queue.o
+ .debug_abbrev  0x0000000000000000      0x1f7 build/os/FreeRTOS/queue.o
+ .debug_aranges
+                0x0000000000000000       0xd8 build/os/FreeRTOS/queue.o
+ .debug_ranges  0x0000000000000000       0xc8 build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000      0x1e6 build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000      0xa5a build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000       0x18 build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000       0x22 build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000       0x52 build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000       0x5c build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000       0x35 build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000       0x34 build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000       0x16 build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000      0x10e build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000       0x86 build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000       0x16 build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000       0x43 build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000       0x57 build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000       0x34 build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000       0x10 build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000       0x52 build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000      0x182 build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000      0x356 build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000       0x22 build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000       0x16 build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000       0x35 build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000      0x34e build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000       0x16 build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000       0xb2 build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000       0x3a build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000      0x182 build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000       0xe7 build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000       0x3a build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000       0x1f build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000       0x12 build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000     0x1144 build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000       0xc3 build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000      0x161 build/os/FreeRTOS/queue.o
+ .debug_macro   0x0000000000000000       0x80 build/os/FreeRTOS/queue.o
+ .debug_line    0x0000000000000000      0xab0 build/os/FreeRTOS/queue.o
+ .debug_str     0x0000000000000000    0x121cb build/os/FreeRTOS/queue.o
+ .comment       0x0000000000000000       0x34 build/os/FreeRTOS/queue.o
+ .debug_frame   0x0000000000000000      0x384 build/os/FreeRTOS/queue.o
+ .ARM.attributes
+                0x0000000000000000       0x2d build/os/FreeRTOS/queue.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/stream_buffer.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/stream_buffer.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/stream_buffer.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/stream_buffer.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/stream_buffer.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/stream_buffer.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/stream_buffer.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/stream_buffer.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/stream_buffer.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/stream_buffer.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/stream_buffer.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/stream_buffer.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/stream_buffer.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/stream_buffer.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/stream_buffer.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/stream_buffer.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/stream_buffer.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/stream_buffer.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/stream_buffer.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/stream_buffer.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/stream_buffer.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/stream_buffer.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/stream_buffer.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/stream_buffer.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/stream_buffer.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/stream_buffer.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/stream_buffer.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/stream_buffer.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/stream_buffer.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/stream_buffer.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/stream_buffer.o
+ .text          0x0000000000000000        0x0 build/os/FreeRTOS/stream_buffer.o
+ .data          0x0000000000000000        0x0 build/os/FreeRTOS/stream_buffer.o
+ .bss           0x0000000000000000        0x0 build/os/FreeRTOS/stream_buffer.o
+ .text.xStreamBufferGenericCreate
+                0x0000000000000000       0x80 build/os/FreeRTOS/stream_buffer.o
+ .text.vStreamBufferDelete
+                0x0000000000000000       0x32 build/os/FreeRTOS/stream_buffer.o
+ .text.xStreamBufferReset
+                0x0000000000000000       0x62 build/os/FreeRTOS/stream_buffer.o
+ .text.xStreamBufferResetFromISR
+                0x0000000000000000       0x82 build/os/FreeRTOS/stream_buffer.o
+ .text.xStreamBufferSetTriggerLevel
+                0x0000000000000000       0x3e build/os/FreeRTOS/stream_buffer.o
+ .text.xStreamBufferSpacesAvailable
+                0x0000000000000000       0x58 build/os/FreeRTOS/stream_buffer.o
+ .text.xStreamBufferBytesAvailable
+                0x0000000000000000       0x1e build/os/FreeRTOS/stream_buffer.o
+ .text.xStreamBufferSend
+                0x0000000000000000      0x12e build/os/FreeRTOS/stream_buffer.o
+ .text.xStreamBufferSendFromISR
+                0x0000000000000000       0xb0 build/os/FreeRTOS/stream_buffer.o
+ .text.prvWriteMessageToBuffer
+                0x0000000000000000       0x72 build/os/FreeRTOS/stream_buffer.o
+ .text.xStreamBufferReceive
+                0x0000000000000000       0xf6 build/os/FreeRTOS/stream_buffer.o
+ .text.xStreamBufferNextMessageLengthBytes
+                0x0000000000000000       0x50 build/os/FreeRTOS/stream_buffer.o
+ .text.xStreamBufferReceiveFromISR
+                0x0000000000000000       0xa8 build/os/FreeRTOS/stream_buffer.o
+ .text.prvReadMessageFromBuffer
+                0x0000000000000000       0x7a build/os/FreeRTOS/stream_buffer.o
+ .text.xStreamBufferIsEmpty
+                0x0000000000000000       0x32 build/os/FreeRTOS/stream_buffer.o
+ .text.xStreamBufferIsFull
+                0x0000000000000000       0x44 build/os/FreeRTOS/stream_buffer.o
+ .text.xStreamBufferSendCompletedFromISR
+                0x0000000000000000       0x70 build/os/FreeRTOS/stream_buffer.o
+ .text.xStreamBufferReceiveCompletedFromISR
+                0x0000000000000000       0x70 build/os/FreeRTOS/stream_buffer.o
+ .text.prvWriteBytesToBuffer
+                0x0000000000000000       0x76 build/os/FreeRTOS/stream_buffer.o
+ .text.prvReadBytesFromBuffer
+                0x0000000000000000       0x76 build/os/FreeRTOS/stream_buffer.o
+ .text.prvBytesInBuffer
+                0x0000000000000000       0x3e build/os/FreeRTOS/stream_buffer.o
+ .text.prvInitialiseNewStreamBuffer
+                0x0000000000000000       0x3e build/os/FreeRTOS/stream_buffer.o
+ .text.uxStreamBufferGetStreamBufferNotificationIndex
+                0x0000000000000000       0x1a build/os/FreeRTOS/stream_buffer.o
+ .text.vStreamBufferSetStreamBufferNotificationIndex
+                0x0000000000000000       0x1e build/os/FreeRTOS/stream_buffer.o
+ .debug_info    0x0000000000000000      0xe86 build/os/FreeRTOS/stream_buffer.o
+ .debug_abbrev  0x0000000000000000      0x221 build/os/FreeRTOS/stream_buffer.o
+ .debug_aranges
+                0x0000000000000000       0xd8 build/os/FreeRTOS/stream_buffer.o
+ .debug_ranges  0x0000000000000000       0xc8 build/os/FreeRTOS/stream_buffer.o
+ .debug_macro   0x0000000000000000      0x1c3 build/os/FreeRTOS/stream_buffer.o
+ .debug_macro   0x0000000000000000      0xa5a build/os/FreeRTOS/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x22 build/os/FreeRTOS/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x52 build/os/FreeRTOS/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x18 build/os/FreeRTOS/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x5c build/os/FreeRTOS/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x35 build/os/FreeRTOS/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x34 build/os/FreeRTOS/stream_buffer.o
+ .debug_macro   0x0000000000000000      0x16d build/os/FreeRTOS/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x16 build/os/FreeRTOS/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x43 build/os/FreeRTOS/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x57 build/os/FreeRTOS/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x34 build/os/FreeRTOS/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x10 build/os/FreeRTOS/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x52 build/os/FreeRTOS/stream_buffer.o
+ .debug_macro   0x0000000000000000      0x182 build/os/FreeRTOS/stream_buffer.o
+ .debug_macro   0x0000000000000000      0x356 build/os/FreeRTOS/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x10 build/os/FreeRTOS/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x35 build/os/FreeRTOS/stream_buffer.o
+ .debug_macro   0x0000000000000000      0x34e build/os/FreeRTOS/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x16 build/os/FreeRTOS/stream_buffer.o
+ .debug_macro   0x0000000000000000       0xb2 build/os/FreeRTOS/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x3a build/os/FreeRTOS/stream_buffer.o
+ .debug_macro   0x0000000000000000      0x182 build/os/FreeRTOS/stream_buffer.o
+ .debug_macro   0x0000000000000000       0xe7 build/os/FreeRTOS/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x3a build/os/FreeRTOS/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x1f build/os/FreeRTOS/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x12 build/os/FreeRTOS/stream_buffer.o
+ .debug_macro   0x0000000000000000     0x1144 build/os/FreeRTOS/stream_buffer.o
+ .debug_macro   0x0000000000000000       0xc3 build/os/FreeRTOS/stream_buffer.o
+ .debug_macro   0x0000000000000000      0x161 build/os/FreeRTOS/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x38 build/os/FreeRTOS/stream_buffer.o
+ .debug_line    0x0000000000000000      0x8fe build/os/FreeRTOS/stream_buffer.o
+ .debug_str     0x0000000000000000    0x1241d build/os/FreeRTOS/stream_buffer.o
+ .comment       0x0000000000000000       0x34 build/os/FreeRTOS/stream_buffer.o
+ .debug_frame   0x0000000000000000      0x3a0 build/os/FreeRTOS/stream_buffer.o
+ .ARM.attributes
+                0x0000000000000000       0x2d build/os/FreeRTOS/stream_buffer.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/tasks.o
+ .text          0x0000000000000000        0x0 build/os/FreeRTOS/tasks.o
+ .data          0x0000000000000000        0x0 build/os/FreeRTOS/tasks.o
+ .bss           0x0000000000000000        0x0 build/os/FreeRTOS/tasks.o
+ .bss.xDelayedTaskList1
+                0x0000000000000000       0x14 build/os/FreeRTOS/tasks.o
+ .bss.xDelayedTaskList2
+                0x0000000000000000       0x14 build/os/FreeRTOS/tasks.o
+ .bss.xPendingReadyList
+                0x0000000000000000       0x14 build/os/FreeRTOS/tasks.o
+ .bss.xTasksWaitingTermination
+                0x0000000000000000       0x14 build/os/FreeRTOS/tasks.o
+ .bss.uxDeletedTasksWaitingCleanUp
+                0x0000000000000000        0x4 build/os/FreeRTOS/tasks.o
+ .bss.xSuspendedTaskList
+                0x0000000000000000       0x14 build/os/FreeRTOS/tasks.o
+ .bss.uxCurrentNumberOfTasks
+                0x0000000000000000        0x4 build/os/FreeRTOS/tasks.o
+ .bss.xSchedulerRunning
+                0x0000000000000000        0x4 build/os/FreeRTOS/tasks.o
+ .bss.uxTaskNumber
+                0x0000000000000000        0x4 build/os/FreeRTOS/tasks.o
+ .bss.xIdleTaskHandles
+                0x0000000000000000        0x4 build/os/FreeRTOS/tasks.o
+ .data.uxTopUsedPriority
+                0x0000000000000000        0x4 build/os/FreeRTOS/tasks.o
+ .text.prvCreateTask
+                0x0000000000000000       0x78 build/os/FreeRTOS/tasks.o
+ .text.xTaskCreate
+                0x0000000000000000       0x46 build/os/FreeRTOS/tasks.o
+ .text.prvInitialiseNewTask
+                0x0000000000000000       0xca build/os/FreeRTOS/tasks.o
+ .text.prvAddNewTaskToReadyList
+                0x0000000000000000      0x128 build/os/FreeRTOS/tasks.o
+ .text.vTaskDelete
+                0x0000000000000000      0x120 build/os/FreeRTOS/tasks.o
+ .text.xTaskDelayUntil
+                0x0000000000000000       0xa4 build/os/FreeRTOS/tasks.o
+ .text.vTaskDelay
+                0x0000000000000000       0x48 build/os/FreeRTOS/tasks.o
+ .text.uxTaskPriorityGet
+                0x0000000000000000       0x34 build/os/FreeRTOS/tasks.o
+ .text.uxTaskPriorityGetFromISR
+                0x0000000000000000       0x58 build/os/FreeRTOS/tasks.o
+ .text.vTaskPrioritySet
+                0x0000000000000000      0x17c build/os/FreeRTOS/tasks.o
+ .text.vTaskSuspend
+                0x0000000000000000      0x120 build/os/FreeRTOS/tasks.o
+ .text.prvTaskIsTaskSuspended
+                0x0000000000000000       0x6c build/os/FreeRTOS/tasks.o
+ .text.vTaskResume
+                0x0000000000000000       0xf4 build/os/FreeRTOS/tasks.o
+ .text.xTaskResumeFromISR
+                0x0000000000000000      0x120 build/os/FreeRTOS/tasks.o
+ .rodata        0x0000000000000000        0x5 build/os/FreeRTOS/tasks.o
+ .text.prvCreateIdleTasks
+                0x0000000000000000       0xac build/os/FreeRTOS/tasks.o
+ .text.vTaskStartScheduler
+                0x0000000000000000       0x5c build/os/FreeRTOS/tasks.o
+ .text.vTaskEndScheduler
+                0x0000000000000000       0x58 build/os/FreeRTOS/tasks.o
+ .text.vTaskSuspendAll
+                0x0000000000000000       0x1c build/os/FreeRTOS/tasks.o
+ .text.xTaskResumeAll
+                0x0000000000000000      0x1f0 build/os/FreeRTOS/tasks.o
+ .text.xTaskGetTickCount
+                0x0000000000000000       0x1c build/os/FreeRTOS/tasks.o
+ .text.xTaskGetTickCountFromISR
+                0x0000000000000000       0x20 build/os/FreeRTOS/tasks.o
+ .text.uxTaskGetNumberOfTasks
+                0x0000000000000000       0x14 build/os/FreeRTOS/tasks.o
+ .text.pcTaskGetName
+                0x0000000000000000       0x2c build/os/FreeRTOS/tasks.o
+ .text.xTaskCatchUpTicks
+                0x0000000000000000       0x34 build/os/FreeRTOS/tasks.o
+ .text.vTaskPlaceOnEventList
+                0x0000000000000000       0x2c build/os/FreeRTOS/tasks.o
+ .text.vTaskPlaceOnUnorderedEventList
+                0x0000000000000000       0x70 build/os/FreeRTOS/tasks.o
+ .text.xTaskRemoveFromEventList
+                0x0000000000000000      0x194 build/os/FreeRTOS/tasks.o
+ .text.vTaskRemoveFromUnorderedEventList
+                0x0000000000000000      0x144 build/os/FreeRTOS/tasks.o
+ .text.vTaskSetTimeOutState
+                0x0000000000000000       0x30 build/os/FreeRTOS/tasks.o
+ .text.vTaskInternalSetTimeOutState
+                0x0000000000000000       0x2c build/os/FreeRTOS/tasks.o
+ .text.xTaskCheckForTimeOut
+                0x0000000000000000       0x94 build/os/FreeRTOS/tasks.o
+ .text.vTaskMissedYield
+                0x0000000000000000       0x18 build/os/FreeRTOS/tasks.o
+ .text.prvIdleTask
+                0x0000000000000000       0x30 build/os/FreeRTOS/tasks.o
+ .text.prvInitialiseTaskLists
+                0x0000000000000000       0x80 build/os/FreeRTOS/tasks.o
+ .text.prvCheckTasksWaitingTermination
+                0x0000000000000000       0x5c build/os/FreeRTOS/tasks.o
+ .text.prvDeleteTCB
+                0x0000000000000000       0x20 build/os/FreeRTOS/tasks.o
+ .text.xTaskGetCurrentTaskHandle
+                0x0000000000000000       0x1c build/os/FreeRTOS/tasks.o
+ .text.xTaskGetCurrentTaskHandleForCore
+                0x0000000000000000       0x30 build/os/FreeRTOS/tasks.o
+ .text.uxTaskResetEventItemValue
+                0x0000000000000000       0x30 build/os/FreeRTOS/tasks.o
+ .text.ulTaskGenericNotifyTake
+                0x0000000000000000       0xf0 build/os/FreeRTOS/tasks.o
+ .text.xTaskGenericNotifyWait
+                0x0000000000000000      0x124 build/os/FreeRTOS/tasks.o
+ .text.xTaskGenericNotify
+                0x0000000000000000      0x1d4 build/os/FreeRTOS/tasks.o
+ .text.xTaskGenericNotifyFromISR
+                0x0000000000000000      0x24c build/os/FreeRTOS/tasks.o
+ .text.vTaskGenericNotifyGiveFromISR
+                0x0000000000000000      0x1bc build/os/FreeRTOS/tasks.o
+ .text.xTaskGenericNotifyStateClear
+                0x0000000000000000       0x58 build/os/FreeRTOS/tasks.o
+ .text.ulTaskGenericNotifyValueClear
+                0x0000000000000000       0x60 build/os/FreeRTOS/tasks.o
+ .text.prvAddCurrentTaskToDelayedList
+                0x0000000000000000      0x104 build/os/FreeRTOS/tasks.o
+ .text.vTaskResetState
+                0x0000000000000000       0xa0 build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000      0xa5a build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000       0x18 build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000       0x22 build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000       0x52 build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000       0x5c build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000       0x35 build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000       0x34 build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000       0x16 build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000      0x10e build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000       0x86 build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000       0x16 build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000       0x43 build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000       0x57 build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000       0x34 build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000       0x10 build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000       0x52 build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000      0x182 build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000      0x356 build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000       0x22 build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000       0x16 build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000       0x35 build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000      0x34e build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000       0x16 build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000       0xb2 build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000       0x3a build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000      0x182 build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000       0xe7 build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000       0x3a build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000       0x1f build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000       0x12 build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000     0x1144 build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000       0xc3 build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000      0x161 build/os/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000000000       0x98 build/os/FreeRTOS/tasks.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/timers.o
+ .text          0x0000000000000000        0x0 build/os/FreeRTOS/timers.o
+ .data          0x0000000000000000        0x0 build/os/FreeRTOS/timers.o
+ .bss           0x0000000000000000        0x0 build/os/FreeRTOS/timers.o
+ .debug_info    0x0000000000000000       0x6f build/os/FreeRTOS/timers.o
+ .debug_abbrev  0x0000000000000000       0x29 build/os/FreeRTOS/timers.o
+ .debug_aranges
+                0x0000000000000000       0x18 build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000      0x193 build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000      0xa5a build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000       0x18 build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000       0x22 build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000       0x52 build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000       0x5c build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000       0x35 build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000       0x34 build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000       0x16 build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000      0x10e build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000       0x86 build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000       0x16 build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000       0x43 build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000       0x57 build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000       0x34 build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000       0x10 build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000       0x52 build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000      0x182 build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000      0x356 build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000       0x22 build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000      0x34e build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000       0x16 build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000       0xb2 build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000       0x3a build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000      0x182 build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000       0xe7 build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000       0x3a build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000       0x1f build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000       0x12 build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000     0x1144 build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000       0xc3 build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000      0x161 build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000       0x80 build/os/FreeRTOS/timers.o
+ .debug_macro   0x0000000000000000       0x9e build/os/FreeRTOS/timers.o
+ .debug_line    0x0000000000000000      0x258 build/os/FreeRTOS/timers.o
+ .debug_str     0x0000000000000000    0x12094 build/os/FreeRTOS/timers.o
+ .comment       0x0000000000000000       0x34 build/os/FreeRTOS/timers.o
+ .ARM.attributes
+                0x0000000000000000       0x33 build/os/FreeRTOS/timers.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .text          0x0000000000000000        0x0 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .data          0x0000000000000000        0x0 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .bss           0x0000000000000000        0x0 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .bss.ucHeap    0x0000000000000000     0x2800 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .rodata.xHeapStructSize
+                0x0000000000000000        0x4 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .bss.xStart    0x0000000000000000        0x8 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .bss.pxEnd     0x0000000000000000        0x4 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .bss.xFreeBytesRemaining
+                0x0000000000000000        0x4 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .bss.xMinimumEverFreeBytesRemaining
+                0x0000000000000000        0x4 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .bss.xNumberOfSuccessfulAllocations
+                0x0000000000000000        0x4 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .bss.xNumberOfSuccessfulFrees
+                0x0000000000000000        0x4 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .text.pvPortMalloc
+                0x0000000000000000      0x164 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .text.vPortFree
+                0x0000000000000000       0x7c build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .text.xPortGetFreeHeapSize
+                0x0000000000000000       0x14 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .text.xPortGetMinimumEverFreeHeapSize
+                0x0000000000000000       0x14 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .text.xPortResetHeapMinimumEverFreeHeapSize
+                0x0000000000000000       0x1c build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .text.vPortInitialiseBlocks
+                0x0000000000000000        0xc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .text.pvPortCalloc
+                0x0000000000000000       0x60 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .text.prvHeapInit
+                0x0000000000000000       0xb4 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .text.prvInsertBlockIntoFreeList
+                0x0000000000000000       0xb0 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .text.vPortGetHeapStats
+                0x0000000000000000       0xbc build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .text.vPortHeapResetState
+                0x0000000000000000       0x40 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_info    0x0000000000000000      0x485 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_abbrev  0x0000000000000000      0x193 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_aranges
+                0x0000000000000000       0x70 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_ranges  0x0000000000000000       0x60 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000      0x1e4 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000      0xa5a build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000       0x18 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000       0x22 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000       0x52 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000       0x5c build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000       0x35 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000       0x34 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000       0x16 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000      0x10e build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000       0x86 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000       0x16 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000       0x43 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000       0x57 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000       0x34 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000       0x10 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000       0x52 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000      0x182 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000      0x356 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000       0x22 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000       0x16 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000       0x35 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000      0x34e build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000       0x16 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000       0xb2 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000       0x3a build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000      0x182 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000       0xe7 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000       0x3a build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000       0x1f build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000       0x12 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000     0x1144 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000       0xc3 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_macro   0x0000000000000000      0x161 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_line    0x0000000000000000      0x5ae build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_str     0x0000000000000000    0x117df build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .comment       0x0000000000000000       0x34 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_frame   0x0000000000000000      0x190 build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .ARM.attributes
+                0x0000000000000000       0x2d build/os/FreeRTOS/portable/MemMang/heap_4.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .group         0x0000000000000000        0xc build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .text          0x0000000000000000        0x0 build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .data          0x0000000000000000        0x0 build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .bss           0x0000000000000000        0x0 build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .data.uxCriticalNesting
+                0x0000000000000000        0x4 build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .text.pxPortInitialiseStack
+                0x0000000000000000       0x58 build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .text.prvTaskExitError
+                0x0000000000000000       0x32 build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .text.prvPortStartFirstTask
+                0x0000000000000000       0x24 build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .text.xPortStartScheduler
+                0x0000000000000000       0x5c build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .text.vPortEndScheduler
+                0x0000000000000000        0xc build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .text.vPortEnterCritical
+                0x0000000000000000       0x34 build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .text.vPortExitCritical
+                0x0000000000000000       0x34 build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .text.vPortSetupTimerInterrupt
+                0x0000000000000000       0x34 build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .debug_macro   0x0000000000000000      0xa5a build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .debug_macro   0x0000000000000000      0x16d build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .debug_macro   0x0000000000000000      0x34e build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .debug_macro   0x0000000000000000       0x16 build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .debug_macro   0x0000000000000000       0xb2 build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .debug_macro   0x0000000000000000       0x3a build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .debug_macro   0x0000000000000000      0x182 build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .debug_macro   0x0000000000000000       0xe7 build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .debug_macro   0x0000000000000000       0x3a build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .debug_macro   0x0000000000000000       0x1f build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .debug_macro   0x0000000000000000       0x12 build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .debug_macro   0x0000000000000000     0x1144 build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .debug_macro   0x0000000000000000       0xc3 build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .debug_macro   0x0000000000000000      0x161 build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .text          0x0000000000000000        0x0 build/startup/my_startup_code.o
+ .data          0x0000000000000000        0x0 build/startup/my_startup_code.o
+ .bss           0x0000000000000000        0x0 build/startup/my_startup_code.o
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-atexit.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-atexit.o)
+ .text          0x0000000000000000       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-exit.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-exit.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-exit.o)
+ .debug_info    0x0000000000000000      0x969 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-exit.o)
+ .debug_abbrev  0x0000000000000000      0x20c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-exit.o)
+ .debug_loc     0x0000000000000000       0x22 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-exit.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-exit.o)
+ .debug_line    0x0000000000000000      0x179 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-exit.o)
+ .debug_str     0x0000000000000000      0x583 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-exit.o)
+ .comment       0x0000000000000000       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-exit.o)
+ .debug_frame   0x0000000000000000       0x28 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-exit.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-exit.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-fini.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-fini.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-impure.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-impure.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-init.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-init.o)
+ .text          0x0000000000000000       0xec /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memcpy.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memcpy.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memcpy.o)
+ .debug_line    0x0000000000000000       0xc1 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memcpy.o)
+ .debug_info    0x0000000000000000       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memcpy.o)
+ .debug_abbrev  0x0000000000000000       0x14 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memcpy.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memcpy.o)
+ .debug_str     0x0000000000000000       0xad /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x0000000000000000       0x1b /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memcpy.o)
+ .text          0x0000000000000000       0xa4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memset.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memset.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memset.o)
+ .debug_info    0x0000000000000000      0x137 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memset.o)
+ .debug_abbrev  0x0000000000000000       0xb4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memset.o)
+ .debug_loc     0x0000000000000000      0x22c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memset.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memset.o)
+ .debug_line    0x0000000000000000      0x1bf /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memset.o)
+ .debug_str     0x0000000000000000      0x1b3 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memset.o)
+ .comment       0x0000000000000000       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memset.o)
+ .debug_frame   0x0000000000000000       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memset.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memset.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__atexit.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__atexit.o)
+ .text          0x0000000000000000       0xb0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__call_atexit.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__call_atexit.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__call_atexit.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtend.o
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtend.o
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtend.o
+ .rodata        0x0000000000000000       0x24 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtend.o
+ .eh_frame      0x0000000000000000        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtend.o
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtn.o
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtn.o
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+RAM              0x0000000020000000 0x0000000000005000 xrw
+FLASH            0x0000000008000000 0x0000000000010000 xr
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crti.o
+LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+LOAD build/app/src/main.o
+LOAD build/bsp/src/servo.o
+LOAD build/bsp/src/h_bridge.o
+LOAD build/bsp/src/encoder.o
+LOAD build/drivers/src/Driver_CAN.o
+LOAD build/drivers/src/Driver_Flash.o
+LOAD build/drivers/src/Driver_GPIO.o
+LOAD build/drivers/src/Driver_USART.o
+LOAD build/drivers/core/src/system_stm32f1xx.o
+LOAD build/os/FreeRTOS/croutine.o
+LOAD build/os/FreeRTOS/event_groups.o
+LOAD build/os/FreeRTOS/list.o
+LOAD build/os/FreeRTOS/queue.o
+LOAD build/os/FreeRTOS/stream_buffer.o
+LOAD build/os/FreeRTOS/tasks.o
+LOAD build/os/FreeRTOS/timers.o
+LOAD build/os/FreeRTOS/portable/MemMang/heap_4.o
+LOAD build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+LOAD build/startup/my_startup_code.o
+START GROUP
+LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a
+LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a
+END GROUP
+LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtend.o
+LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtn.o
+                0x0000000020005000                _estack = (ORIGIN (RAM) + LENGTH (RAM))
+                0x0000000000000800                _stack_size = DEFINED (_stack_size)?_stack_size:0x800
+                0x0000000000000400                _heap_size = DEFINED (_heap_size)?_heap_size:0x400
+
+.vector         0x0000000008000000      0x108
+                0x0000000008000000                . = ALIGN (0x4)
+ *(.vector)
+ .vector        0x0000000008000000      0x108 build/startup/my_startup_code.o
+                0x0000000008000000                vector_table
+                0x0000000008000108                . = ALIGN (0x4)
+
+.text           0x0000000008000108      0x580
+                0x0000000008000108                . = ALIGN (0x4)
+ *(.text)
+ .text          0x0000000008000108       0x88 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+ .text          0x0000000008000190        0xc /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-atexit.o)
+                0x0000000008000190                atexit
+ .text          0x000000000800019c       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-fini.o)
+                0x000000000800019c                __libc_fini_array
+ .text          0x00000000080001c8       0x48 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-init.o)
+                0x00000000080001c8                __libc_init_array
+ .text          0x0000000008000210       0x64 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__atexit.o)
+                0x0000000008000210                __register_exitproc
+ *(.text*)
+ .text.main     0x0000000008000274        0xe build/app/src/main.o
+                0x0000000008000274                main
+ .text.SystemInit
+                0x0000000008000282        0xc build/drivers/core/src/system_stm32f1xx.o
+                0x0000000008000282                SystemInit
+ *fill*         0x000000000800028e        0x2 
+ .text.xTaskIncrementTick
+                0x0000000008000290      0x210 build/os/FreeRTOS/tasks.o
+                0x0000000008000290                xTaskIncrementTick
+ .text.vTaskSwitchContext
+                0x00000000080004a0       0x8c build/os/FreeRTOS/tasks.o
+                0x00000000080004a0                vTaskSwitchContext
+ .text.prvResetNextTaskUnblockTime
+                0x000000000800052c       0x34 build/os/FreeRTOS/tasks.o
+ .text.SVC_Handler
+                0x0000000008000560       0x28 build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+                0x0000000008000560                SVC_Handler
+ .text.PendSV_Handler
+                0x0000000008000588       0x48 build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+                0x0000000008000588                PendSV_Handler
+ .text.SysTick_Handler
+                0x00000000080005d0       0x44 build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+                0x00000000080005d0                SysTick_Handler
+ .text.Reset_Handler
+                0x0000000008000614       0x48 build/startup/my_startup_code.o
+                0x0000000008000614                Reset_Handler
+                0x0000000008000646                RTC_Alarm_IRQHandler
+                0x0000000008000646                EXTI2_IRQHandler
+                0x0000000008000646                DebugMon_Handler
+                0x0000000008000646                TIM1_CC_IRQHandler
+                0x0000000008000646                HardFault_Handler
+                0x0000000008000646                PVD_IRQHandler
+                0x0000000008000646                NMI_Handler
+                0x0000000008000646                EXTI3_IRQHandler
+                0x0000000008000646                EXTI0_IRQHandler
+                0x0000000008000646                I2C2_EV_IRQHandler
+                0x0000000008000646                UsageFault_Handler
+                0x0000000008000646                ADC1_2_IRQHandler
+                0x0000000008000646                SPI1_IRQHandler
+                0x0000000008000646                TAMPER_IRQHandler
+                0x0000000008000646                DMA1_Channel4_IRQHandler
+                0x0000000008000646                USART3_IRQHandler
+                0x0000000008000646                RTC_IRQHandler
+                0x0000000008000646                DMA1_Channel7_IRQHandler
+                0x0000000008000646                CAN1_RX1_IRQHandler
+                0x0000000008000646                TIM4_IRQHandler
+                0x0000000008000646                I2C1_EV_IRQHandler
+                0x0000000008000646                DMA1_Channel6_IRQHandler
+                0x0000000008000646                TIM3_IRQHandler
+                0x0000000008000646                RCC_IRQHandler
+                0x0000000008000646                TIM1_TRG_COM_IRQHandler
+                0x0000000008000646                DMA1_Channel1_IRQHandler
+                0x0000000008000646                EXTI15_10_IRQHandler
+                0x0000000008000646                EXTI9_5_IRQHandler
+                0x0000000008000646                SPI2_IRQHandler
+                0x0000000008000646                MemManage_Handler
+                0x0000000008000646                DMA1_Channel5_IRQHandler
+                0x0000000008000646                EXTI4_IRQHandler
+                0x0000000008000646                USB_LP_CAN1_RX0_IRQHandler
+                0x0000000008000646                USB_HP_CAN1_TX_IRQHandler
+                0x0000000008000646                DMA1_Channel3_IRQHandler
+                0x0000000008000646                TIM1_UP_IRQHandler
+                0x0000000008000646                WWDG_IRQHandler
+                0x0000000008000646                TIM2_IRQHandler
+                0x0000000008000646                TIM1_BRK_IRQHandler
+                0x0000000008000646                EXTI1_IRQHandler
+                0x0000000008000646                USART2_IRQHandler
+                0x0000000008000646                I2C2_ER_IRQHandler
+                0x0000000008000646                DMA1_Channel2_IRQHandler
+                0x0000000008000646                CAN1_SCE_IRQHandler
+                0x0000000008000646                FLASH_IRQHandler
+                0x0000000008000646                BusFault_Handler
+                0x0000000008000646                USART1_IRQHandler
+                0x0000000008000646                I2C1_ER_IRQHandler
+                0x0000000008000646                USBWakeUp_IRQHandler
+ .text.startup  0x000000000800065c       0x14 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__call_atexit.o)
+ *(.glue_7)
+ .glue_7        0x0000000008000670        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x0000000008000670        0x0 linker stubs
+ *(.eh_frame)
+ .eh_frame      0x0000000008000670        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+ *(.init)
+ .init          0x0000000008000670        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crti.o
+                0x0000000008000670                _init
+ .init          0x0000000008000674        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtn.o
+ *(.fini)
+ .fini          0x000000000800067c        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crti.o
+                0x000000000800067c                _fini
+ .fini          0x0000000008000680        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtn.o
+                0x0000000008000688                . = ALIGN (0x4)
+                0x0000000008000688                _etext = .
+
+.vfp11_veneer   0x0000000008000688        0x0
+ .vfp11_veneer  0x0000000008000688        0x0 linker stubs
+
+.v4_bx          0x0000000008000688        0x0
+ .v4_bx         0x0000000008000688        0x0 linker stubs
+
+.iplt           0x0000000008000688        0x0
+ .iplt          0x0000000008000688        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+
+.rodata         0x0000000008000688        0x4
+                0x0000000008000688                . = ALIGN (0x4)
+ *(.rodata)
+ .rodata        0x0000000008000688        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-impure.o)
+                0x0000000008000688                _global_impure_ptr
+ *(.rodata*)
+                0x000000000800068c                . = ALIGN (0x4)
+
+.rel.dyn        0x000000000800068c        0x0
+ .rel.iplt      0x000000000800068c        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+
+.ARM            0x000000000800068c        0x0
+                0x000000000800068c                . = ALIGN (0x4)
+                0x000000000800068c                __exidx_start = .
+ *(.ARM.exidx*)
+                0x000000000800068c                . = ALIGN (0x4)
+                0x000000000800068c                __exidx_end = .
+
+.ARM.attributes
+                0x000000000800068c       0x29
+                0x000000000800068c                . = ALIGN (0x4)
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x000000000800068c       0x1d /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crti.o
+ .ARM.attributes
+                0x00000000080006a9       0x2d /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+ .ARM.attributes
+                0x00000000080006d6       0x2d build/app/src/main.o
+ .ARM.attributes
+                0x0000000008000703       0x2d build/drivers/core/src/system_stm32f1xx.o
+ .ARM.attributes
+                0x0000000008000730       0x2d build/os/FreeRTOS/tasks.o
+ .ARM.attributes
+                0x000000000800075d       0x2d build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .ARM.attributes
+                0x000000000800078a       0x1b build/startup/my_startup_code.o
+ .ARM.attributes
+                0x00000000080007a5       0x2d /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-atexit.o)
+ .ARM.attributes
+                0x00000000080007d2       0x2d /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-fini.o)
+ .ARM.attributes
+                0x00000000080007ff       0x2d /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-impure.o)
+ .ARM.attributes
+                0x000000000800082c       0x2d /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-init.o)
+ .ARM.attributes
+                0x0000000008000859       0x2d /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__atexit.o)
+ .ARM.attributes
+                0x0000000008000886       0x2d /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__call_atexit.o)
+ .ARM.attributes
+                0x00000000080008b3       0x2d /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtend.o
+ .ARM.attributes
+                0x00000000080008e0       0x1d /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtn.o
+                0x0000000008000900                . = ALIGN (0x4)
+ *fill*         0x00000000080008fd        0x3 
+
+.preinit_array  0x0000000008000900        0x0
+                0x0000000008000900                . = ALIGN (0x4)
+                0x0000000008000900                PROVIDE (__preinit_array_start = .)
+ *(.preinit_array*)
+                0x0000000008000900                PROVIDE (__preinit_array_end = .)
+
+.init_array     0x0000000008000900        0x8
+                0x0000000008000900                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (*__init_array_start = .)
+ *(SORT_BY_NAME(.init_array.*))
+ .init_array.00000
+                0x0000000008000900        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__call_atexit.o)
+ *(.init_array*)
+ .init_array    0x0000000008000904        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+                0x0000000008000908                PROVIDE (__init_array_end = .)
+
+.fini_array     0x0000000008000908        0x4
+                0x0000000008000908                PROVIDE (__fini_array_start = .)
+ *(SORT_BY_NAME(.fini_array.*))
+ *(.fini_array*)
+ .fini_array    0x0000000008000908        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+                0x000000000800090c                PROVIDE (__fini_array_end = .)
+                0x000000000800090c                _sidata = LOADADDR (.data)
+
+.data           0x0000000020000000      0x430 load address 0x000000000800090c
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                _sdata = .
+ *(.data)
+ .data          0x0000000020000000      0x430 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-impure.o)
+                0x0000000020000000                _impure_ptr
+ *(.data*)
+                0x0000000020000430                . = ALIGN (0x4)
+                0x0000000020000430                _edata = .
+
+.tm_clone_table
+                0x0000000020000430        0x0 load address 0x0000000008000d3c
+ .tm_clone_table
+                0x0000000020000430        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+ .tm_clone_table
+                0x0000000020000430        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtend.o
+
+.igot.plt       0x0000000020000430        0x0 load address 0x0000000008000d3c
+ .igot.plt      0x0000000020000430        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+
+.bss            0x0000000020000430       0xa8 load address 0x0000000008000d3c
+                0x0000000020000430                . = ALIGN (0x4)
+                0x0000000020000430                _sbss = .
+                0x0000000020000430                __bss_start__ = _sbss
+ *(.bss)
+ .bss           0x0000000020000430       0x1c /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+ *(.bss*)
+ .bss.pxCurrentTCB
+                0x000000002000044c        0x4 build/os/FreeRTOS/tasks.o
+                0x000000002000044c                pxCurrentTCB
+ .bss.pxReadyTasksLists
+                0x0000000020000450       0x64 build/os/FreeRTOS/tasks.o
+ .bss.pxDelayedTaskList
+                0x00000000200004b4        0x4 build/os/FreeRTOS/tasks.o
+ .bss.pxOverflowDelayedTaskList
+                0x00000000200004b8        0x4 build/os/FreeRTOS/tasks.o
+ .bss.xTickCount
+                0x00000000200004bc        0x4 build/os/FreeRTOS/tasks.o
+ .bss.uxTopReadyPriority
+                0x00000000200004c0        0x4 build/os/FreeRTOS/tasks.o
+ .bss.xPendedTicks
+                0x00000000200004c4        0x4 build/os/FreeRTOS/tasks.o
+ .bss.xYieldPendings
+                0x00000000200004c8        0x4 build/os/FreeRTOS/tasks.o
+ .bss.xNumOfOverflows
+                0x00000000200004cc        0x4 build/os/FreeRTOS/tasks.o
+ .bss.xNextTaskUnblockTime
+                0x00000000200004d0        0x4 build/os/FreeRTOS/tasks.o
+ .bss.uxSchedulerSuspended
+                0x00000000200004d4        0x4 build/os/FreeRTOS/tasks.o
+ *(COMMON)
+                0x00000000200004d8                __bss_end__ = .
+                0x00000000200004d8                _ebss = __bss_end__
+
+.heap           0x00000000200004d8      0xc00 load address 0x0000000008000d3c
+                0x00000000200004d8                . = ALIGN (0x8)
+                [!provide]                        PROVIDE (end = _ebss)
+                [!provide]                        PROVIDE (_end = _ebss)
+                0x00000000200008d8                . = (. + _heap_size)
+ *fill*         0x00000000200004d8      0x400 
+                [!provide]                        PROVIDE (_eheap = .)
+                0x00000000200010d8                . = (. + _stack_size)
+ *fill*         0x00000000200008d8      0x800 
+                [!provide]                        PROVIDE (_sp = .)
+                0x00000000200010d8                . = ALIGN (0x8)
+OUTPUT(build/my_project.elf elf32-littlearm)
+LOAD linker stubs
+
+.comment        0x0000000000000000       0x33
+ .comment       0x0000000000000000       0x33 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+                                         0x34 (size before relaxing)
+ .comment       0x0000000000000033       0x34 build/app/src/main.o
+ .comment       0x0000000000000033       0x34 build/drivers/core/src/system_stm32f1xx.o
+ .comment       0x0000000000000033       0x34 build/os/FreeRTOS/tasks.o
+ .comment       0x0000000000000033       0x34 build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-atexit.o)
+ .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-fini.o)
+ .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-impure.o)
+ .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-init.o)
+ .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__atexit.o)
+ .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__call_atexit.o)
+ .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtend.o
+
+.debug_info     0x0000000000000000     0x412f
+ .debug_info    0x0000000000000000       0x47 build/app/src/main.o
+ .debug_info    0x0000000000000047      0x21e build/drivers/core/src/system_stm32f1xx.o
+ .debug_info    0x0000000000000265     0x1b61 build/os/FreeRTOS/tasks.o
+ .debug_info    0x0000000000001dc6      0x310 build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .debug_info    0x00000000000020d6       0x26 build/startup/my_startup_code.o
+ .debug_info    0x00000000000020fc      0x100 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-atexit.o)
+ .debug_info    0x00000000000021fc      0x102 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-fini.o)
+ .debug_info    0x00000000000022fe      0x92a /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-impure.o)
+ .debug_info    0x0000000000002c28      0x11a /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-init.o)
+ .debug_info    0x0000000000002d42      0x9b0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__atexit.o)
+ .debug_info    0x00000000000036f2      0xa3d /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__call_atexit.o)
+
+.debug_abbrev   0x0000000000000000      0xf85
+ .debug_abbrev  0x0000000000000000       0x3c build/app/src/main.o
+ .debug_abbrev  0x000000000000003c      0x13b build/drivers/core/src/system_stm32f1xx.o
+ .debug_abbrev  0x0000000000000177      0x2ef build/os/FreeRTOS/tasks.o
+ .debug_abbrev  0x0000000000000466      0x210 build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .debug_abbrev  0x0000000000000676       0x14 build/startup/my_startup_code.o
+ .debug_abbrev  0x000000000000068a       0xb7 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-atexit.o)
+ .debug_abbrev  0x0000000000000741       0xcf /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-fini.o)
+ .debug_abbrev  0x0000000000000810      0x1b8 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-impure.o)
+ .debug_abbrev  0x00000000000009c8       0xcc /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-init.o)
+ .debug_abbrev  0x0000000000000a94      0x23f /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__atexit.o)
+ .debug_abbrev  0x0000000000000cd3      0x2b2 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__call_atexit.o)
+
+.debug_aranges  0x0000000000000000      0x348
+ .debug_aranges
+                0x0000000000000000       0x20 build/app/src/main.o
+ .debug_aranges
+                0x0000000000000020       0x28 build/drivers/core/src/system_stm32f1xx.o
+ .debug_aranges
+                0x0000000000000048      0x1b0 build/os/FreeRTOS/tasks.o
+ .debug_aranges
+                0x00000000000001f8       0x70 build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .debug_aranges
+                0x0000000000000268       0x20 build/startup/my_startup_code.o
+ .debug_aranges
+                0x0000000000000288       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-atexit.o)
+ .debug_aranges
+                0x00000000000002a8       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-fini.o)
+ .debug_aranges
+                0x00000000000002c8       0x18 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-impure.o)
+ .debug_aranges
+                0x00000000000002e0       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-init.o)
+ .debug_aranges
+                0x0000000000000300       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__atexit.o)
+ .debug_aranges
+                0x0000000000000320       0x28 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__call_atexit.o)
+
+.debug_ranges   0x0000000000000000      0x298
+ .debug_ranges  0x0000000000000000       0x10 build/app/src/main.o
+ .debug_ranges  0x0000000000000010       0x18 build/drivers/core/src/system_stm32f1xx.o
+ .debug_ranges  0x0000000000000028      0x1c0 build/os/FreeRTOS/tasks.o
+ .debug_ranges  0x00000000000001e8       0x60 build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .debug_ranges  0x0000000000000248       0x50 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__call_atexit.o)
+
+.debug_macro    0x0000000000000000     0xfe53
+ .debug_macro   0x0000000000000000       0x15 build/app/src/main.o
+ .debug_macro   0x0000000000000015      0xa5a build/app/src/main.o
+ .debug_macro   0x0000000000000a6f       0x7f build/drivers/core/src/system_stm32f1xx.o
+ .debug_macro   0x0000000000000aee       0x2e build/drivers/core/src/system_stm32f1xx.o
+ .debug_macro   0x0000000000000b1c       0x22 build/drivers/core/src/system_stm32f1xx.o
+ .debug_macro   0x0000000000000b3e       0x1c build/drivers/core/src/system_stm32f1xx.o
+ .debug_macro   0x0000000000000b5a       0x22 build/drivers/core/src/system_stm32f1xx.o
+ .debug_macro   0x0000000000000b7c       0xbd build/drivers/core/src/system_stm32f1xx.o
+ .debug_macro   0x0000000000000c39      0xd23 build/drivers/core/src/system_stm32f1xx.o
+ .debug_macro   0x000000000000195c     0xe09e build/drivers/core/src/system_stm32f1xx.o
+ .debug_macro   0x000000000000f9fa       0x6d build/drivers/core/src/system_stm32f1xx.o
+ .debug_macro   0x000000000000fa67      0x273 build/os/FreeRTOS/tasks.o
+ .debug_macro   0x000000000000fcda       0x17 build/os/FreeRTOS/tasks.o
+ .debug_macro   0x000000000000fcf1      0x162 build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+
+.debug_line     0x0000000000000000     0x207b
+ .debug_line    0x0000000000000000       0x56 build/app/src/main.o
+ .debug_line    0x0000000000000056      0x1a7 build/drivers/core/src/system_stm32f1xx.o
+ .debug_line    0x00000000000001fd     0x12f4 build/os/FreeRTOS/tasks.o
+ .debug_line    0x00000000000014f1      0x30d build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .debug_line    0x00000000000017fe       0x6b build/startup/my_startup_code.o
+ .debug_line    0x0000000000001869       0xc0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-atexit.o)
+ .debug_line    0x0000000000001929       0xed /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-fini.o)
+ .debug_line    0x0000000000001a16       0xe4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-impure.o)
+ .debug_line    0x0000000000001afa      0x13f /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-init.o)
+ .debug_line    0x0000000000001c39      0x1ab /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__atexit.o)
+ .debug_line    0x0000000000001de4      0x297 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__call_atexit.o)
+
+.debug_str      0x0000000000000000    0x64645
+ .debug_str     0x0000000000000000     0x2c3e build/app/src/main.o
+ .debug_str     0x0000000000002c3e    0x51298 build/drivers/core/src/system_stm32f1xx.o
+                                      0x540ec (size before relaxing)
+ .debug_str     0x0000000000053ed6     0xf866 build/os/FreeRTOS/tasks.o
+                                      0x130b3 (size before relaxing)
+ .debug_str     0x000000000006373c      0x74e build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+                                       0xedbb (size before relaxing)
+ .debug_str     0x0000000000063e8a       0x26 build/startup/my_startup_code.o
+                                         0x46 (size before relaxing)
+ .debug_str     0x0000000000063eb0      0x140 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-atexit.o)
+                                        0x1dc (size before relaxing)
+ .debug_str     0x0000000000063ff0       0xbd /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-fini.o)
+                                        0x1d4 (size before relaxing)
+ .debug_str     0x00000000000640ad      0x435 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-impure.o)
+                                        0x57a (size before relaxing)
+ .debug_str     0x00000000000644e2       0x96 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-init.o)
+                                        0x1fe (size before relaxing)
+ .debug_str     0x0000000000064578       0x3b /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__atexit.o)
+                                        0x5b4 (size before relaxing)
+ .debug_str     0x00000000000645b3       0x92 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__call_atexit.o)
+                                        0x5e0 (size before relaxing)
+
+.debug_frame    0x0000000000000000      0xa54
+ .debug_frame   0x0000000000000000       0x30 build/app/src/main.o
+ .debug_frame   0x0000000000000030       0x58 build/drivers/core/src/system_stm32f1xx.o
+ .debug_frame   0x0000000000000088      0x768 build/os/FreeRTOS/tasks.o
+ .debug_frame   0x00000000000007f0      0x168 build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+ .debug_frame   0x0000000000000958       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-atexit.o)
+ .debug_frame   0x0000000000000978       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-fini.o)
+ .debug_frame   0x00000000000009ac       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-init.o)
+ .debug_frame   0x00000000000009d8       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__atexit.o)
+ .debug_frame   0x0000000000000a04       0x50 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__call_atexit.o)
+
+.debug_loc      0x0000000000000000      0x43d
+ .debug_loc     0x0000000000000000       0x32 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-atexit.o)
+ .debug_loc     0x0000000000000032       0x68 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-fini.o)
+ .debug_loc     0x000000000000009a       0xba /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-init.o)
+ .debug_loc     0x0000000000000154      0x13b /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__atexit.o)
+ .debug_loc     0x000000000000028f      0x1ae /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__call_atexit.o)
+
+Cross Reference Table
+
+Symbol                                            File
+ADC1_2_IRQHandler                                 build/startup/my_startup_code.o
+AHBPrescTable                                     build/drivers/core/src/system_stm32f1xx.o
+APBPrescTable                                     build/drivers/core/src/system_stm32f1xx.o
+BusFault_Handler                                  build/startup/my_startup_code.o
+CAN1_RX1_IRQHandler                               build/startup/my_startup_code.o
+CAN1_SCE_IRQHandler                               build/startup/my_startup_code.o
+DMA1_Channel1_IRQHandler                          build/startup/my_startup_code.o
+DMA1_Channel2_IRQHandler                          build/startup/my_startup_code.o
+DMA1_Channel3_IRQHandler                          build/startup/my_startup_code.o
+DMA1_Channel4_IRQHandler                          build/startup/my_startup_code.o
+DMA1_Channel5_IRQHandler                          build/startup/my_startup_code.o
+DMA1_Channel6_IRQHandler                          build/startup/my_startup_code.o
+DMA1_Channel7_IRQHandler                          build/startup/my_startup_code.o
+DebugMon_Handler                                  build/startup/my_startup_code.o
+Driver_CAN0                                       build/drivers/src/Driver_CAN.o
+Driver_Flash0                                     build/drivers/src/Driver_Flash.o
+Driver_GPIO0                                      build/drivers/src/Driver_GPIO.o
+Driver_USART0                                     build/drivers/src/Driver_USART.o
+EXTI0_IRQHandler                                  build/startup/my_startup_code.o
+EXTI15_10_IRQHandler                              build/startup/my_startup_code.o
+EXTI1_IRQHandler                                  build/startup/my_startup_code.o
+EXTI2_IRQHandler                                  build/startup/my_startup_code.o
+EXTI3_IRQHandler                                  build/startup/my_startup_code.o
+EXTI4_IRQHandler                                  build/startup/my_startup_code.o
+EXTI9_5_IRQHandler                                build/startup/my_startup_code.o
+FLASH_IRQHandler                                  build/startup/my_startup_code.o
+HardFault_Handler                                 build/startup/my_startup_code.o
+I2C1_ER_IRQHandler                                build/startup/my_startup_code.o
+I2C1_EV_IRQHandler                                build/startup/my_startup_code.o
+I2C2_ER_IRQHandler                                build/startup/my_startup_code.o
+I2C2_EV_IRQHandler                                build/startup/my_startup_code.o
+MemManage_Handler                                 build/startup/my_startup_code.o
+NMI_Handler                                       build/startup/my_startup_code.o
+PVD_IRQHandler                                    build/startup/my_startup_code.o
+PendSV_Handler                                    build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+RCC_IRQHandler                                    build/startup/my_startup_code.o
+RTC_Alarm_IRQHandler                              build/startup/my_startup_code.o
+RTC_IRQHandler                                    build/startup/my_startup_code.o
+Reset_Handler                                     build/startup/my_startup_code.o
+SPI1_IRQHandler                                   build/startup/my_startup_code.o
+SPI2_IRQHandler                                   build/startup/my_startup_code.o
+SVC_Handler                                       build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+SysTick_Handler                                   build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+SystemCoreClock                                   build/drivers/core/src/system_stm32f1xx.o
+SystemCoreClockUpdate                             build/drivers/core/src/system_stm32f1xx.o
+SystemInit                                        build/drivers/core/src/system_stm32f1xx.o
+                                                  build/startup/my_startup_code.o
+TAMPER_IRQHandler                                 build/startup/my_startup_code.o
+TIM1_BRK_IRQHandler                               build/startup/my_startup_code.o
+TIM1_CC_IRQHandler                                build/startup/my_startup_code.o
+TIM1_TRG_COM_IRQHandler                           build/startup/my_startup_code.o
+TIM1_UP_IRQHandler                                build/startup/my_startup_code.o
+TIM2_IRQHandler                                   build/startup/my_startup_code.o
+TIM3_IRQHandler                                   build/startup/my_startup_code.o
+TIM4_IRQHandler                                   build/startup/my_startup_code.o
+USART1_IRQHandler                                 build/startup/my_startup_code.o
+USART2_IRQHandler                                 build/startup/my_startup_code.o
+USART3_IRQHandler                                 build/startup/my_startup_code.o
+USBWakeUp_IRQHandler                              build/startup/my_startup_code.o
+USB_HP_CAN1_TX_IRQHandler                         build/startup/my_startup_code.o
+USB_LP_CAN1_RX0_IRQHandler                        build/startup/my_startup_code.o
+UsageFault_Handler                                build/startup/my_startup_code.o
+WWDG_IRQHandler                                   build/startup/my_startup_code.o
+_ITM_deregisterTMCloneTable                       /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+_ITM_registerTMCloneTable                         /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+__TMC_END__                                       /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtend.o
+                                                  /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+__bss_end__                                       /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+__bss_start__                                     /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+__call_exitprocs                                  /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__call_atexit.o)
+                                                  /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-exit.o)
+__deregister_frame_info                           /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+__dso_handle                                      /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+__fini_array_end                                  /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-fini.o)
+__fini_array_start                                /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-fini.o)
+__init_array_end                                  /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-init.o)
+__init_array_start                                /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-init.o)
+__libc_fini                                       /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__call_atexit.o)
+__libc_fini_array                                 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-fini.o)
+                                                  /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__call_atexit.o)
+                                                  /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+__libc_init_array                                 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-init.o)
+                                                  build/startup/my_startup_code.o
+                                                  /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+__preinit_array_end                               /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-init.o)
+__preinit_array_start                             /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-init.o)
+__register_exitproc                               /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__atexit.o)
+                                                  /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-atexit.o)
+__register_frame_info                             /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+__stack                                           /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+_ebss                                             build/startup/my_startup_code.o
+_edata                                            build/startup/my_startup_code.o
+_estack                                           build/startup/my_startup_code.o
+_exit                                             /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-exit.o)
+_fini                                             /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crti.o
+                                                  /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-fini.o)
+_global_impure_ptr                                /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-impure.o)
+                                                  /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__call_atexit.o)
+                                                  /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__atexit.o)
+                                                  /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-exit.o)
+_impure_ptr                                       /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-impure.o)
+_init                                             /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crti.o
+                                                  /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-init.o)
+_mainCRTStartup                                   /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+_sbss                                             build/startup/my_startup_code.o
+_sdata                                            build/startup/my_startup_code.o
+_sidata                                           build/startup/my_startup_code.o
+_stack_init                                       /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+_start                                            /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+atexit                                            /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-atexit.o)
+                                                  /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-__call_atexit.o)
+                                                  /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+default_handler                                   build/startup/my_startup_code.o
+exit                                              /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-exit.o)
+                                                  /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+hardware_init_hook                                /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+main                                              build/app/src/main.o
+                                                  build/startup/my_startup_code.o
+                                                  /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+memcpy                                            /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memcpy.o)
+                                                  build/os/FreeRTOS/stream_buffer.o
+                                                  build/os/FreeRTOS/queue.o
+memset                                            /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memset.o)
+                                                  build/os/FreeRTOS/portable/MemMang/heap_4.o
+                                                  build/os/FreeRTOS/tasks.o
+                                                  build/os/FreeRTOS/stream_buffer.o
+                                                  /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+pcTaskGetName                                     build/os/FreeRTOS/tasks.o
+pvPortCalloc                                      build/os/FreeRTOS/portable/MemMang/heap_4.o
+pvPortMalloc                                      build/os/FreeRTOS/portable/MemMang/heap_4.o
+                                                  build/os/FreeRTOS/tasks.o
+                                                  build/os/FreeRTOS/stream_buffer.o
+                                                  build/os/FreeRTOS/queue.o
+                                                  build/os/FreeRTOS/event_groups.o
+pxCurrentTCB                                      build/os/FreeRTOS/tasks.o
+                                                  build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+pxPortInitialiseStack                             build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+                                                  build/os/FreeRTOS/tasks.o
+software_init_hook                                /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+ulTaskGenericNotifyTake                           build/os/FreeRTOS/tasks.o
+ulTaskGenericNotifyValueClear                     build/os/FreeRTOS/tasks.o
+uxListRemove                                      build/os/FreeRTOS/list.o
+                                                  build/os/FreeRTOS/tasks.o
+uxQueueGetQueueItemSize                           build/os/FreeRTOS/queue.o
+uxQueueGetQueueLength                             build/os/FreeRTOS/queue.o
+uxQueueMessagesWaiting                            build/os/FreeRTOS/queue.o
+uxQueueMessagesWaitingFromISR                     build/os/FreeRTOS/queue.o
+uxQueueSpacesAvailable                            build/os/FreeRTOS/queue.o
+uxStreamBufferGetStreamBufferNotificationIndex    build/os/FreeRTOS/stream_buffer.o
+uxTaskGetNumberOfTasks                            build/os/FreeRTOS/tasks.o
+                                                  build/os/FreeRTOS/queue.o
+uxTaskPriorityGet                                 build/os/FreeRTOS/tasks.o
+uxTaskPriorityGetFromISR                          build/os/FreeRTOS/tasks.o
+uxTaskResetEventItemValue                         build/os/FreeRTOS/tasks.o
+                                                  build/os/FreeRTOS/event_groups.o
+vEventGroupClearBitsCallback                      build/os/FreeRTOS/event_groups.o
+vEventGroupDelete                                 build/os/FreeRTOS/event_groups.o
+vEventGroupSetBitsCallback                        build/os/FreeRTOS/event_groups.o
+vListInitialise                                   build/os/FreeRTOS/list.o
+                                                  build/os/FreeRTOS/tasks.o
+                                                  build/os/FreeRTOS/queue.o
+                                                  build/os/FreeRTOS/event_groups.o
+vListInitialiseItem                               build/os/FreeRTOS/list.o
+                                                  build/os/FreeRTOS/tasks.o
+vListInsert                                       build/os/FreeRTOS/list.o
+                                                  build/os/FreeRTOS/tasks.o
+vListInsertEnd                                    build/os/FreeRTOS/list.o
+                                                  build/os/FreeRTOS/tasks.o
+vPortEndScheduler                                 build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+                                                  build/os/FreeRTOS/tasks.o
+vPortEnterCritical                                build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+                                                  build/os/FreeRTOS/portable/MemMang/heap_4.o
+                                                  build/os/FreeRTOS/tasks.o
+                                                  build/os/FreeRTOS/stream_buffer.o
+                                                  build/os/FreeRTOS/queue.o
+                                                  build/os/FreeRTOS/event_groups.o
+vPortExitCritical                                 build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+                                                  build/os/FreeRTOS/portable/MemMang/heap_4.o
+                                                  build/os/FreeRTOS/tasks.o
+                                                  build/os/FreeRTOS/stream_buffer.o
+                                                  build/os/FreeRTOS/queue.o
+                                                  build/os/FreeRTOS/event_groups.o
+vPortFree                                         build/os/FreeRTOS/portable/MemMang/heap_4.o
+                                                  build/os/FreeRTOS/tasks.o
+                                                  build/os/FreeRTOS/stream_buffer.o
+                                                  build/os/FreeRTOS/queue.o
+                                                  build/os/FreeRTOS/event_groups.o
+vPortGetHeapStats                                 build/os/FreeRTOS/portable/MemMang/heap_4.o
+vPortHeapResetState                               build/os/FreeRTOS/portable/MemMang/heap_4.o
+vPortInitialiseBlocks                             build/os/FreeRTOS/portable/MemMang/heap_4.o
+vPortSetupTimerInterrupt                          build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+vQueueDelete                                      build/os/FreeRTOS/queue.o
+vStreamBufferDelete                               build/os/FreeRTOS/stream_buffer.o
+vStreamBufferSetStreamBufferNotificationIndex     build/os/FreeRTOS/stream_buffer.o
+vTaskDelay                                        build/os/FreeRTOS/tasks.o
+vTaskDelete                                       build/os/FreeRTOS/tasks.o
+vTaskEndScheduler                                 build/os/FreeRTOS/tasks.o
+vTaskGenericNotifyGiveFromISR                     build/os/FreeRTOS/tasks.o
+vTaskInternalSetTimeOutState                      build/os/FreeRTOS/tasks.o
+                                                  build/os/FreeRTOS/queue.o
+vTaskMissedYield                                  build/os/FreeRTOS/tasks.o
+                                                  build/os/FreeRTOS/queue.o
+vTaskPlaceOnEventList                             build/os/FreeRTOS/tasks.o
+                                                  build/os/FreeRTOS/queue.o
+vTaskPlaceOnUnorderedEventList                    build/os/FreeRTOS/tasks.o
+                                                  build/os/FreeRTOS/event_groups.o
+vTaskPrioritySet                                  build/os/FreeRTOS/tasks.o
+vTaskRemoveFromUnorderedEventList                 build/os/FreeRTOS/tasks.o
+                                                  build/os/FreeRTOS/event_groups.o
+vTaskResetState                                   build/os/FreeRTOS/tasks.o
+vTaskResume                                       build/os/FreeRTOS/tasks.o
+vTaskSetTimeOutState                              build/os/FreeRTOS/tasks.o
+                                                  build/os/FreeRTOS/stream_buffer.o
+vTaskStartScheduler                               build/os/FreeRTOS/tasks.o
+vTaskSuspend                                      build/os/FreeRTOS/tasks.o
+vTaskSuspendAll                                   build/os/FreeRTOS/tasks.o
+                                                  build/os/FreeRTOS/portable/MemMang/heap_4.o
+                                                  build/os/FreeRTOS/stream_buffer.o
+                                                  build/os/FreeRTOS/queue.o
+                                                  build/os/FreeRTOS/event_groups.o
+vTaskSwitchContext                                build/os/FreeRTOS/tasks.o
+                                                  build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+vector_table                                      build/startup/my_startup_code.o
+xEventGroupClearBits                              build/os/FreeRTOS/event_groups.o
+xEventGroupCreate                                 build/os/FreeRTOS/event_groups.o
+xEventGroupGetBitsFromISR                         build/os/FreeRTOS/event_groups.o
+xEventGroupSetBits                                build/os/FreeRTOS/event_groups.o
+xEventGroupSync                                   build/os/FreeRTOS/event_groups.o
+xEventGroupWaitBits                               build/os/FreeRTOS/event_groups.o
+xPortGetFreeHeapSize                              build/os/FreeRTOS/portable/MemMang/heap_4.o
+xPortGetMinimumEverFreeHeapSize                   build/os/FreeRTOS/portable/MemMang/heap_4.o
+xPortResetHeapMinimumEverFreeHeapSize             build/os/FreeRTOS/portable/MemMang/heap_4.o
+xPortStartScheduler                               build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+                                                  build/os/FreeRTOS/tasks.o
+xQueueGenericCreate                               build/os/FreeRTOS/queue.o
+xQueueGenericReset                                build/os/FreeRTOS/queue.o
+xQueueGenericSend                                 build/os/FreeRTOS/queue.o
+xQueueGenericSendFromISR                          build/os/FreeRTOS/queue.o
+xQueueGiveFromISR                                 build/os/FreeRTOS/queue.o
+xQueueIsQueueEmptyFromISR                         build/os/FreeRTOS/queue.o
+xQueueIsQueueFullFromISR                          build/os/FreeRTOS/queue.o
+xQueuePeek                                        build/os/FreeRTOS/queue.o
+xQueuePeekFromISR                                 build/os/FreeRTOS/queue.o
+xQueueReceive                                     build/os/FreeRTOS/queue.o
+xQueueReceiveFromISR                              build/os/FreeRTOS/queue.o
+xQueueSemaphoreTake                               build/os/FreeRTOS/queue.o
+xStreamBufferBytesAvailable                       build/os/FreeRTOS/stream_buffer.o
+xStreamBufferGenericCreate                        build/os/FreeRTOS/stream_buffer.o
+xStreamBufferIsEmpty                              build/os/FreeRTOS/stream_buffer.o
+xStreamBufferIsFull                               build/os/FreeRTOS/stream_buffer.o
+xStreamBufferNextMessageLengthBytes               build/os/FreeRTOS/stream_buffer.o
+xStreamBufferReceive                              build/os/FreeRTOS/stream_buffer.o
+xStreamBufferReceiveCompletedFromISR              build/os/FreeRTOS/stream_buffer.o
+xStreamBufferReceiveFromISR                       build/os/FreeRTOS/stream_buffer.o
+xStreamBufferReset                                build/os/FreeRTOS/stream_buffer.o
+xStreamBufferResetFromISR                         build/os/FreeRTOS/stream_buffer.o
+xStreamBufferSend                                 build/os/FreeRTOS/stream_buffer.o
+xStreamBufferSendCompletedFromISR                 build/os/FreeRTOS/stream_buffer.o
+xStreamBufferSendFromISR                          build/os/FreeRTOS/stream_buffer.o
+xStreamBufferSetTriggerLevel                      build/os/FreeRTOS/stream_buffer.o
+xStreamBufferSpacesAvailable                      build/os/FreeRTOS/stream_buffer.o
+xTaskCatchUpTicks                                 build/os/FreeRTOS/tasks.o
+xTaskCheckForTimeOut                              build/os/FreeRTOS/tasks.o
+                                                  build/os/FreeRTOS/stream_buffer.o
+                                                  build/os/FreeRTOS/queue.o
+xTaskCreate                                       build/os/FreeRTOS/tasks.o
+xTaskDelayUntil                                   build/os/FreeRTOS/tasks.o
+xTaskGenericNotify                                build/os/FreeRTOS/tasks.o
+                                                  build/os/FreeRTOS/stream_buffer.o
+xTaskGenericNotifyFromISR                         build/os/FreeRTOS/tasks.o
+                                                  build/os/FreeRTOS/stream_buffer.o
+xTaskGenericNotifyStateClear                      build/os/FreeRTOS/tasks.o
+                                                  build/os/FreeRTOS/stream_buffer.o
+xTaskGenericNotifyWait                            build/os/FreeRTOS/tasks.o
+                                                  build/os/FreeRTOS/stream_buffer.o
+xTaskGetCurrentTaskHandle                         build/os/FreeRTOS/tasks.o
+                                                  build/os/FreeRTOS/stream_buffer.o
+xTaskGetCurrentTaskHandleForCore                  build/os/FreeRTOS/tasks.o
+xTaskGetTickCount                                 build/os/FreeRTOS/tasks.o
+xTaskGetTickCountFromISR                          build/os/FreeRTOS/tasks.o
+xTaskIncrementTick                                build/os/FreeRTOS/tasks.o
+                                                  build/os/FreeRTOS/portable/GCC/ARM_CM3/port.o
+xTaskRemoveFromEventList                          build/os/FreeRTOS/tasks.o
+                                                  build/os/FreeRTOS/queue.o
+xTaskResumeAll                                    build/os/FreeRTOS/tasks.o
+                                                  build/os/FreeRTOS/portable/MemMang/heap_4.o
+                                                  build/os/FreeRTOS/stream_buffer.o
+                                                  build/os/FreeRTOS/queue.o
+                                                  build/os/FreeRTOS/event_groups.o
+xTaskResumeFromISR                                build/os/FreeRTOS/tasks.o
