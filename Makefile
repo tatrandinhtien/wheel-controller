@@ -28,19 +28,21 @@ include os/FreeRTOS/module.mk
 CPU 		= -mthumb -mcpu=cortex-m3
 DEFINES 	= -DSTM32F103xB
 
-GENERAL_FLAGS = -O0 				\
-				-g3 				\
-				-Wall 				\
-				-fdata-sections 	\
-				-ffunction-sections \
-				-MMD 				\
-				-MP
+GENERAL_FLAGS = -O0 						\
+				-g3 						\
+				-Wall 						\
+				-fdata-sections 			\
+				-ffunction-sections 		\
+				-MMD 						\
+				-MP							\
+				--specs=nano.specs  		\
+				-fsingle-precision-constant
 
 CFLAGS  = $(CPU) $(DEFINES) $(INCLUDE) $(GENERAL_FLAGS) -std=c99 -MF"$(@:%.o=%.d)"
 CXXFLAGS = $(CPU) $(DEFINES) $(INCLUDE) $(GENERAL_FLAGS) -std=c++11 -MF"$(@:%.o=%.d)"
 
 LDFLAGS = $(CPU)									\
-		 -Tlinker/my_linker_script.ld 						\
+		 -Tlinker/my_linker_script.ld 				\
 		 -Wl,-Map=$(BUILD_DIR)/$(TARGET).map,--cref	\
 		 -Wl,--gc-sections
 
