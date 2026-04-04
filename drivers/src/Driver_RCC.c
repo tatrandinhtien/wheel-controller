@@ -1,7 +1,7 @@
 /**
  * @file Driver_RCC.c
  * @author Tien Ta (tien.ta.eswe@gmail.com)
- * @brief
+ * @brief   Driver for RCC, configure system clock to 72Mhz.
  * @version 0.1
  * @date 2026-04-01
  *

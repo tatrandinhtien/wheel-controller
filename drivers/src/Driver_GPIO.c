@@ -1,7 +1,18 @@
-/********************************************************************
-* @author: Tien Ta (Email: tien.ta.eswe@gmail.com)
-* @date  : 02/04/2026
-********************************************************************/
+/**
+ * @file Driver_GPIO.c
+ * @author Tien Ta (Email: tien.ta.eswe@gmail.com)
+ * @brief Driver for GPIO with these function:
+ *        - Register Callback for interrupt.
+ *        - Read status of pin.
+ *        - Write value to pin.
+ *        - Config Output mode push/pull or open drain.
+ *        - Config Input mode pullup/pulldown.
+ * @version 0.1
+ * @date 2026-04-04
+ *
+ * @copyright Copyright (c) 2026
+ *
+ */
 
 #include "Driver_GPIO.h"
 #include "Driver_RCC.h"
@@ -32,6 +43,10 @@ static GPIO_TypeDef *gpio_exti_active_port[PINS_OF_PORT];
 * Helper function
 ********************************************************************/
 
+/**
+ * @brief Reset value of GPIO struct.
+ *
+ */
 static void GPIO_ResetStruct(GPIO_t *my_gpio)
 {
   my_gpio->gpio = NULL;
@@ -39,6 +54,10 @@ static void GPIO_ResetStruct(GPIO_t *my_gpio)
   my_gpio->pin_num = 0;
 }
 
+/**
+ * @brief Convert port, pin number, gpio register.
+ *
+ */
 static void GPIO_ConvertPin(ARM_GPIO_Pin_t pin, GPIO_t *my_gpio)
 {
   if (my_gpio != NULL)
@@ -54,7 +73,7 @@ static void GPIO_ConvertPin(ARM_GPIO_Pin_t pin, GPIO_t *my_gpio)
 ********************************************************************/
 
 /**
- * @brief Set up GPIO interface
+ * @brief Set up GPIO interface.
  *
  */
 static int32_t GPIO_Setup (ARM_GPIO_Pin_t pin, ARM_GPIO_SignalEvent_t cb_event)
@@ -125,7 +144,7 @@ static int32_t GPIO_Setup (ARM_GPIO_Pin_t pin, ARM_GPIO_SignalEvent_t cb_event)
 }
 
 /**
- * @brief Set GPIO direction
+ * @brief Set GPIO direction.
  *
  */
 static int32_t GPIO_SetDirection (ARM_GPIO_Pin_t pin, ARM_GPIO_DIRECTION direction)
@@ -134,10 +153,11 @@ static int32_t GPIO_SetDirection (ARM_GPIO_Pin_t pin, ARM_GPIO_DIRECTION directi
 
   if (PIN_IS_AVAILABLE(pin))
   {
+    volatile uint32_t *gpio_low_high_reg = NULL;
     GPIO_t my_gpio;
+
     GPIO_ResetStruct(&my_gpio);
     GPIO_ConvertPin(pin, &my_gpio);
-    volatile uint32_t *gpio_low_high_reg = NULL;
 
     if (my_gpio.pin_num >= 8)
     {
@@ -172,7 +192,7 @@ static int32_t GPIO_SetDirection (ARM_GPIO_Pin_t pin, ARM_GPIO_DIRECTION directi
 }
 
 /**
- * @brief Set GPIO output mode
+ * @brief Set GPIO output mode.
  *
  */
 static int32_t GPIO_SetOutputMode (ARM_GPIO_Pin_t pin, ARM_GPIO_OUTPUT_MODE mode)
@@ -181,8 +201,8 @@ static int32_t GPIO_SetOutputMode (ARM_GPIO_Pin_t pin, ARM_GPIO_OUTPUT_MODE mode
 
   if (PIN_IS_AVAILABLE(pin))
   {
-    GPIO_t my_gpio;
     volatile uint32_t *gpio_low_high_reg = NULL;
+    GPIO_t my_gpio;
 
     GPIO_ResetStruct(&my_gpio);
     GPIO_ConvertPin(pin, &my_gpio);
@@ -219,7 +239,7 @@ static int32_t GPIO_SetOutputMode (ARM_GPIO_Pin_t pin, ARM_GPIO_OUTPUT_MODE mode
 }
 
 /**
- * @brief Set GPIO pull resistor
+ * @brief Set GPIO pull resistor.
  *
  */
 static int32_t GPIO_SetPullResistor (ARM_GPIO_Pin_t pin, ARM_GPIO_PULL_RESISTOR resistor)
@@ -228,8 +248,8 @@ static int32_t GPIO_SetPullResistor (ARM_GPIO_Pin_t pin, ARM_GPIO_PULL_RESISTOR 
 
   if (PIN_IS_AVAILABLE(pin))
   {
-    GPIO_t my_gpio;
     volatile uint32_t *gpio_low_high_reg = NULL;
+    GPIO_t my_gpio;
 
     GPIO_ResetStruct(&my_gpio);
     GPIO_ConvertPin(pin, &my_gpio);
@@ -251,12 +271,12 @@ static int32_t GPIO_SetPullResistor (ARM_GPIO_Pin_t pin, ARM_GPIO_PULL_RESISTOR 
       case ARM_GPIO_PULL_UP:
         *gpio_low_high_reg &= ~(0b11 << (((my_gpio.pin_num % 8) * 4) + 2));
         *gpio_low_high_reg |= (0b10 << (((my_gpio.pin_num % 8) * 4) + 2));
-        my_gpio.gpio->BSRR = (1 << my_gpio.pin_num);
+        my_gpio.gpio->BSRR = (1U << my_gpio.pin_num);
         break;
       case ARM_GPIO_PULL_DOWN:
         *gpio_low_high_reg &= ~(0b11 << (((my_gpio.pin_num % 8) * 4) + 2));
         *gpio_low_high_reg |= (0b10 << (((my_gpio.pin_num % 8) * 4) + 2));
-        my_gpio.gpio->BSRR = (1 << (my_gpio.pin_num + PINS_OF_PORT));
+        my_gpio.gpio->BSRR = (1U << (my_gpio.pin_num + PINS_OF_PORT));
         break;
       default:
         result = ARM_DRIVER_ERROR_PARAMETER;
@@ -272,7 +292,7 @@ static int32_t GPIO_SetPullResistor (ARM_GPIO_Pin_t pin, ARM_GPIO_PULL_RESISTOR 
 }
 
 /**
- * @brief Set GPIO event trigger
+ * @brief Set GPIO event trigger.
  *
  */
 static int32_t GPIO_SetEventTrigger (ARM_GPIO_Pin_t pin, ARM_GPIO_EVENT_TRIGGER trigger)
@@ -324,7 +344,7 @@ static int32_t GPIO_SetEventTrigger (ARM_GPIO_Pin_t pin, ARM_GPIO_EVENT_TRIGGER 
 }
 
 /**
- * @brief Set GPIO output
+ * @brief Set GPIO output.
  *
  */
 static void GPIO_SetOutput (ARM_GPIO_Pin_t pin, uint32_t val)
@@ -339,10 +359,10 @@ static void GPIO_SetOutput (ARM_GPIO_Pin_t pin, uint32_t val)
     switch (val)
     {
       case 0:
-        my_gpio.gpio->BSRR = (1 << (my_gpio.pin_num + PINS_OF_PORT));
+        my_gpio.gpio->BSRR = (1U << (my_gpio.pin_num + PINS_OF_PORT));
         break;
       case 1:
-        my_gpio.gpio->BSRR = (1 << my_gpio.pin_num);
+        my_gpio.gpio->BSRR = (1U << my_gpio.pin_num);
         break;
       default:
         /* fault value */
@@ -352,7 +372,7 @@ static void GPIO_SetOutput (ARM_GPIO_Pin_t pin, uint32_t val)
 }
 
 /**
- * @brief Get GPIO input
+ * @brief Get GPIO input.
  *
  */
 static uint32_t GPIO_GetInput (ARM_GPIO_Pin_t pin)
@@ -365,13 +385,13 @@ static uint32_t GPIO_GetInput (ARM_GPIO_Pin_t pin)
 
   if (PIN_IS_AVAILABLE(pin))
   {
-    val = (my_gpio.gpio->IDR & (1 << my_gpio.pin_num)) >> my_gpio.pin_num;
+    val = (my_gpio.gpio->IDR & (1U << my_gpio.pin_num)) >> my_gpio.pin_num;
   }
   return val;
 }
 
 /**
- * @brief GPIO Driver structure
+ * @brief GPIO Driver structure.
  *
  */
 ARM_DRIVER_GPIO Driver_GPIO0 = {
@@ -388,9 +408,13 @@ ARM_DRIVER_GPIO Driver_GPIO0 = {
 * GPIO Interrupt Service Routine
 ********************************************************************/
 
+/**
+ * @brief ISR of external interrupt line 0.
+ *
+ */
 void EXTI0_IRQHandler(void)
 {
-  uint8_t check = (EXTI->PR & (1 << 0));
+  uint8_t check = (EXTI->PR & (1U << 0));
   uint8_t pin = gpio_exti_active_pin[0];
 
   if (check)
@@ -410,9 +434,13 @@ void EXTI0_IRQHandler(void)
   }
 }
 
+/**
+ * @brief ISR of external interrupt line 1.
+ *
+ */
 void EXTI1_IRQHandler(void)
 {
-  uint8_t check = (EXTI->PR & (1 << 1));
+  uint8_t check = (EXTI->PR & (1U << 1));
   uint8_t pin = gpio_exti_active_pin[1];
 
   if (check)
@@ -432,9 +460,13 @@ void EXTI1_IRQHandler(void)
   }
 }
 
+/**
+ * @brief ISR of external interrupt line 2.
+ *
+ */
 void EXTI2_IRQHandler(void)
 {
-  uint8_t check = (EXTI->PR & (1 << 2));
+  uint8_t check = (EXTI->PR & (1U << 2));
   uint8_t pin = gpio_exti_active_pin[2];
 
   if (check)
@@ -454,9 +486,13 @@ void EXTI2_IRQHandler(void)
   }
 }
 
+/**
+ * @brief ISR of external interrupt line 3.
+ *
+ */
 void EXTI3_IRQHandler(void)
 {
-  uint8_t check = (EXTI->PR & (1 << 3));
+  uint8_t check = (EXTI->PR & (1U << 3));
   uint8_t pin = gpio_exti_active_pin[3];
 
   if (check)
@@ -476,9 +512,13 @@ void EXTI3_IRQHandler(void)
   }
 }
 
+/**
+ * @brief ISR of external interrupt line 4.
+ *
+ */
 void EXTI4_IRQHandler(void)
 {
-  uint8_t check = (EXTI->PR & (1 << 4));
+  uint8_t check = (EXTI->PR & (1U << 4));
   uint8_t pin = gpio_exti_active_pin[4];
 
   if (check)
@@ -498,14 +538,17 @@ void EXTI4_IRQHandler(void)
   }
 }
 
+/**
+ * @brief ISR of external interrupt line 5-9.
+ *
+ */
 void EXTI9_5_IRQHandler(void)
 {
-  uint8_t line = 0;
   uint8_t pin = 0;
 
   for (int i = 5; i <= 9; i++)
   {
-    if (EXTI->PR & (1 << i))
+    if (EXTI->PR & (1U << i))
     {
       EXTI->PR |= (1U << i);
       pin = gpio_exti_active_pin[i];
@@ -524,14 +567,17 @@ void EXTI9_5_IRQHandler(void)
   }
 }
 
+/**
+ * @brief ISR of external interrupt line 10-15.
+ *
+ */
 void EXTI15_10_IRQHandler(void)
 {
-  uint8_t line = 0;
   uint8_t pin = 0;
 
   for (int i = 10; i <= 15; i++)
   {
-    if (EXTI->PR & (1 << i))
+    if (EXTI->PR & (1U << i))
     {
       EXTI->PR |= (1U << i);
       pin = gpio_exti_active_pin[i];
