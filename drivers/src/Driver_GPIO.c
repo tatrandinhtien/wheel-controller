@@ -45,7 +45,7 @@ static GPIO_TypeDef *gpio_exti_active_port[PINS_OF_PORT];
  * @brief Reset value of GPIO struct.
  *
  */
-static void GPIO_ResetStruct(GPIO_t *my_gpio)
+static void GPIO_ResetStruct (GPIO_t *my_gpio)
 {
   my_gpio->gpio = NULL;
   my_gpio->port_num = 0;
@@ -56,7 +56,7 @@ static void GPIO_ResetStruct(GPIO_t *my_gpio)
  * @brief Convert port, pin number, gpio register.
  *
  */
-static void GPIO_ConvertPin(ARM_GPIO_Pin_t pin, GPIO_t *my_gpio)
+static void GPIO_ConvertPin (ARM_GPIO_Pin_t pin, GPIO_t *my_gpio)
 {
   if (my_gpio != NULL)
   {
@@ -171,9 +171,13 @@ static int32_t GPIO_SetDirection (ARM_GPIO_Pin_t pin, ARM_GPIO_DIRECTION directi
         *gpio_low_high_reg &= ~(0b11 << (my_gpio.pin_num % 8 * 4));
         break;
       case ARM_GPIO_OUTPUT:
-      /* Slew rate 2Mhz */
-      *gpio_low_high_reg &= ~(0b11 << (my_gpio.pin_num % 8 * 4));
-      *gpio_low_high_reg |= (0b10 << (my_gpio.pin_num % 8 * 4));
+        /* Slew rate 2Mhz */
+        *gpio_low_high_reg &= ~(0b11 << (my_gpio.pin_num % 8 * 4));
+        *gpio_low_high_reg |= (0b10 << (my_gpio.pin_num % 8 * 4));
+        break;
+      case ARM_GPIO_AF_OUTPUT:
+        *gpio_low_high_reg &= ~(0b11 << (my_gpio.pin_num % 8 * 4));
+        *gpio_low_high_reg |= (0b11 << (my_gpio.pin_num % 8 * 4));
         break;
       default:
         result = ARM_DRIVER_ERROR_PARAMETER;
@@ -221,6 +225,14 @@ static int32_t GPIO_SetOutputMode (ARM_GPIO_Pin_t pin, ARM_GPIO_OUTPUT_MODE mode
       case ARM_GPIO_OPEN_DRAIN:
         *gpio_low_high_reg &= ~(0b11 << (((my_gpio.pin_num % 8) * 4) + 2));
         *gpio_low_high_reg |= (0b01 << (((my_gpio.pin_num % 8) * 4) + 2));
+        break;
+      case ARM_AFIO_PUSH_PULL:
+        *gpio_low_high_reg &= ~(0b11 << (((my_gpio.pin_num % 8) * 4) + 2));
+        *gpio_low_high_reg |= (0b10 << (((my_gpio.pin_num % 8) * 4) + 2));
+        break;
+      case ARM_AFIO_OPEN_DRAIN:
+        *gpio_low_high_reg &= ~(0b11 << (((my_gpio.pin_num % 8) * 4) + 2));
+        *gpio_low_high_reg |= (0b11 << (((my_gpio.pin_num % 8) * 4) + 2));
         break;
       default:
         result = ARM_DRIVER_ERROR_PARAMETER;
@@ -404,7 +416,6 @@ ARM_DRIVER_GPIO Driver_GPIO0 = {
 /********************************************************************
 * GPIO Interrupt Service Routine
 ********************************************************************/
-
 /**
  * @brief ISR of external interrupt line 0.
  *

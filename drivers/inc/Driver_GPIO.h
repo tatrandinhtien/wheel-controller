@@ -42,7 +42,8 @@ typedef uint32_t ARM_GPIO_Pin_t;
 */
 typedef enum {
   ARM_GPIO_INPUT,                       ///< Input (default)
-  ARM_GPIO_OUTPUT                       ///< Output
+  ARM_GPIO_OUTPUT,                       ///< Output (2Mhz slew rate)
+  ARM_GPIO_AF_OUTPUT                    ///< Output AF (50Mhz slew rate)
 } ARM_GPIO_DIRECTION;
 
 /**
@@ -50,7 +51,9 @@ typedef enum {
 */
 typedef enum {
   ARM_GPIO_PUSH_PULL,                   ///< Push-pull (default)
-  ARM_GPIO_OPEN_DRAIN                   ///< Open-drain
+  ARM_GPIO_OPEN_DRAIN,                  ///< Open-drain
+  ARM_AFIO_PUSH_PULL,
+  ARM_AFIO_OPEN_DRAIN
 } ARM_GPIO_OUTPUT_MODE;
 
 /**

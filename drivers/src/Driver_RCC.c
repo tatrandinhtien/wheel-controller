@@ -32,7 +32,7 @@ int32_t RCC_SystemClock_72Mhz(void)
     FLASH->ACR &= ~(0x7U << FLASH_ACR_LATENCY_Pos);
     FLASH->ACR |= (0b010U << FLASH_ACR_LATENCY_Pos);
 
-    /* AHB prescaler 1, APB1 prescaler 2, APB2 prescaler 1 */
+    /* AHB prescaler 1, APB1 prescaler: 2, APB2 prescaler: 1 */
     RCC->CFGR &= ~(0xFU << RCC_CFGR_HPRE_Pos);
     RCC->CFGR &= ~(0x7U << RCC_CFGR_PPRE1_Pos);
     RCC->CFGR |= (0b100U << RCC_CFGR_PPRE1_Pos);
@@ -55,3 +55,7 @@ int32_t RCC_SystemClock_72Mhz(void)
 
     return res;
 }
+
+ARM_DRIVER_RCC Driver_RCC0 = {
+    RCC_SystemClock_72Mhz
+};

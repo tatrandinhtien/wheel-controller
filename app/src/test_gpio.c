@@ -1,15 +1,13 @@
-#include "test_config.h"
 #include "test_gpio.h"
+#include "test_config.h"
 
 #include "system_stm32f1xx.h"
 
 #include "Driver_RCC.h"
 #include "Driver_GPIO.h"
 
-
 /**
  * @brief Software delay
- *
  */
 static void delay(uint32_t time)
 {
@@ -22,7 +20,11 @@ static void delay(uint32_t time)
 #ifdef  GPIO_TEST
 
 extern ARM_DRIVER_GPIO Driver_GPIO0;
+extern ARM_DRIVER_RCC Driver_RCC0;
 
+/**
+ * @brief Test GPIO input.
+ */
 void button_callback(ARM_GPIO_Pin_t pin, uint32_t event)
 {
     if (pin == BUTTON)
@@ -40,7 +42,6 @@ void button_callback(ARM_GPIO_Pin_t pin, uint32_t event)
 
 /**
  * @brief Test GPIO output.
- *
  */
 static void test_blink_led()
 {
@@ -58,7 +59,6 @@ static void test_blink_led()
 
 /**
  * @brief Test GPIO input.
- *
  */
 static void test_button_int()
 {
@@ -69,7 +69,7 @@ static void test_button_int()
     Driver_GPIO0.SetPullResistor(BUTTON, ARM_GPIO_PULL_UP);
     Driver_GPIO0.SetEventTrigger(BUTTON, ARM_GPIO_TRIGGER_EITHER_EDGE);
 
-    /* Configure LED */
+    /* Configure led */
     RCC_GPIOC_CLK_EN();
     Driver_GPIO0.Setup(LED, NULL);
     Driver_GPIO0.SetDirection(LED, ARM_GPIO_OUTPUT);
@@ -81,9 +81,12 @@ static void test_button_int()
     }
 }
 
+/**
+ * @brief Test GPIO.
+ */
 void test_gpio_run(void)
 {
-    RCC_SystemClock_72Mhz();
+    Driver_RCC0.SetSystemClock();
     SystemCoreClockUpdate();
 
     #ifdef BLINK_LED_TEST
