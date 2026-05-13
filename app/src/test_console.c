@@ -35,11 +35,6 @@ void test_console_run(void) {
     // Disable stdout buffering for embedded systems
     setvbuf(stdout, NULL, _IONBF, 0);
 
-    printf("\n");
-    printf("==========================================\r\n");
-    printf("      System Boot: Console Ready!         \r\n");
-    printf("==========================================\r\n");
-
     // 2. Vòng lặp test in liên tục
     while (1) {
 

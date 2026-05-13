@@ -1,67 +1,83 @@
 #include "stm32f103xb.h"
 
-#include "Driver_Timer.h"
 #include "Driver_RCC.h"
+#include "Driver_Timer.h"
 
-#define TIM_NUM     4U
+#define TIM_NUM 4U
 
-#define ADVANCED    0U
-#define GENERAL     1U
+#define ADVANCED 0U
+#define GENERAL 1U
 
-TIM_TypeDef *tim_arr[TIM_NUM] = {TIM1, TIM2, TIM3, TIM4};
+TIM_TypeDef* tim_arr[TIM_NUM] = {TIM1, TIM2, TIM3, TIM4};
 
 uint32_t const max_count_val = 65536;
 
-typedef struct
-{
-    TIM_TypeDef *tim;
-    uint32_t in_clk;    /* Clock input */
+typedef struct {
+    TIM_TypeDef* tim;
+    uint32_t in_clk; /* Clock input */
     bool type;
 } TIM_t;
 
 /**
  * @brief Convert from tim num to get needed parameters.
  */
-static void TIM_Convert(TIM_t *my_tim, uint8_t tim)
-{
-    if (my_tim != NULL)
-    {
-        my_tim->tim = tim_arr[tim-1];
+static int32_t TIM_Convert(TIM_t* my_tim, uint8_t tim) {
+    int32_t result = ARM_DRIVER_ERROR;
+
+    if (my_tim != NULL && tim > 0 && tim < 5) {
+        my_tim->tim = tim_arr[tim - 1];
         my_tim->in_clk = SystemCoreClock;
-        if (tim == 1)
-        {
+        if (tim == 1) {
             my_tim->type = ADVANCED;
-        }
-        else
-        {
+        } else {
             my_tim->type = GENERAL;
         }
+        result = ARM_DRIVER_OK;
     }
+
+    return result;
 }
 
 /**
  * @brief Set up frequency of PWM by configuring PSC and ARR register.
  */
-static int32_t TIM_PWM_Setup (ARM_TIM_NUM tim, uint16_t freq_hz)
-{
+static int32_t TIM_PWM_Setup(ARM_TIM_NUM tim, uint16_t freq_hz) {
     int32_t result = ARM_DRIVER_OK;
-    uint32_t psc_calc = 0;
-    uint32_t arr_calc = 0;
-
+    uint32_t total_divider, psc_calc = 0;
     TIM_t my_tim;
-    TIM_Convert(&my_tim, tim);
 
-    if (freq_hz == 0 || freq_hz > SystemCoreClock)
-    {
+    if (TIM_Convert(&my_tim, tim) == ARM_DRIVER_ERROR) {
+        result = ARM_DRIVER_ERROR;
+        return result;
+    }
+
+    if (freq_hz == 0 || freq_hz > SystemCoreClock) {
         return ARM_DRIVER_ERROR;
     }
 
-    /* Calculate the prescaler and reload value */
-    psc_calc = SystemCoreClock / (freq_hz * max_count_val);
-    arr_calc = (SystemCoreClock / (((psc_calc + 1) * freq_hz) - 1));
+    total_divider = SystemCoreClock / freq_hz;
+    switch (tim) {
+        case ARM_TIM_1:
+            RCC_TIM1_CLK_EN();
+            break;
+        case ARM_TIM_2:
+            RCC_TIM2_CLK_EN();
+            break;
+        case ARM_TIM_3:
+            RCC_TIM3_CLK_EN();
+            break;
+        case ARM_TIM_4:
+            RCC_TIM4_CLK_EN();
+            break;
+        default:
+            /* Can not reach here */
+            break;
+    }
 
+    /* Calculate the prescaler and reload value */
+    psc_calc = (total_divider - 1) / 65536;
     my_tim.tim->PSC = (uint16_t)psc_calc;
-    my_tim.tim->ARR = (uint16_t)arr_calc;
+    my_tim.tim->ARR = (uint16_t)((total_divider / (psc_calc + 1)) - 1);
 
     return result;
 }
@@ -69,14 +85,16 @@ static int32_t TIM_PWM_Setup (ARM_TIM_NUM tim, uint16_t freq_hz)
 /**
  * @brief Set mode for PWM, enable the Preload.
  */
-static int32_t TIM_PWM_SetMode (ARM_TIM_NUM tim, ARM_TIM_CHANNEL channel)
-{
+static int32_t TIM_PWM_SetMode(ARM_TIM_NUM tim, ARM_TIM_CHANNEL channel) {
     int32_t result = ARM_DRIVER_OK;
     TIM_t my_tim;
-    TIM_Convert(&my_tim, tim);
 
-    switch(channel)
-    {
+    if (TIM_Convert(&my_tim, tim) == ARM_DRIVER_ERROR) {
+        result = ARM_DRIVER_ERROR;
+        return result;
+    }
+
+    switch (channel) {
         case ARM_CHANNEL_1:
             /* Channel 1 ouput */
             my_tim.tim->CCMR1 &= ~(0b11 << TIM_CCMR1_CC1S_Pos);
@@ -104,6 +122,9 @@ static int32_t TIM_PWM_SetMode (ARM_TIM_NUM tim, ARM_TIM_CHANNEL channel)
             my_tim.tim->CCMR2 |= (0b110 << TIM_CCMR2_OC4M_Pos);
             my_tim.tim->CCMR2 |= (1 << TIM_CCMR2_OC4PE_Pos);
             break;
+        default:
+            result = ARM_DRIVER_ERROR;
+            break;
     }
 
     return result;
@@ -112,16 +133,19 @@ static int32_t TIM_PWM_SetMode (ARM_TIM_NUM tim, ARM_TIM_CHANNEL channel)
 /**
  * @brief Set duty cycle for PWM.
  */
-static int32_t TIM_PWM_SetDuty (ARM_TIM_NUM tim, ARM_TIM_CHANNEL channel, uint8_t duty)
-{
+static int32_t TIM_PWM_SetDuty(ARM_TIM_NUM tim, ARM_TIM_CHANNEL channel, uint8_t duty) {
     int32_t result = ARM_DRIVER_OK;
+    uint32_t load_val;
     TIM_t my_tim;
-    TIM_Convert(&my_tim, tim);
 
-    uint32_t load_val = ((uint32_t) duty * my_tim.tim->ARR) / 100;
+    if (TIM_Convert(&my_tim, tim) == ARM_DRIVER_ERROR) {
+        result = ARM_DRIVER_ERROR;
+        return result;
+    }
 
-    switch (channel)
-    {
+   load_val = (uint32_t)((duty * (my_tim.tim->ARR + 1)) / 100);
+
+    switch (channel) {
         case ARM_CHANNEL_1:
             my_tim.tim->CCR1 = load_val;
             break;
@@ -145,15 +169,16 @@ static int32_t TIM_PWM_SetDuty (ARM_TIM_NUM tim, ARM_TIM_CHANNEL channel, uint8_
 /**
  * @brief Trigger and enbale the safety for advanced tim (TIM1).
  */
-static int32_t TIM_PWM_Trigger (ARM_TIM_NUM tim, ARM_TIM_CHANNEL channel)
-{
+static int32_t TIM_PWM_Trigger(ARM_TIM_NUM tim, ARM_TIM_CHANNEL channel) {
     int32_t result = ARM_DRIVER_OK;
-
     TIM_t my_tim;
-    TIM_Convert(&my_tim, tim);
 
-    switch(channel)
-    {
+    if (TIM_Convert(&my_tim, tim) == ARM_DRIVER_ERROR) {
+        result = ARM_DRIVER_ERROR;
+        return result;
+    }
+
+    switch (channel) {
         case ARM_CHANNEL_1:
             my_tim.tim->CCER |= (1 << TIM_CCER_CC1E_Pos);
             break;
@@ -168,11 +193,10 @@ static int32_t TIM_PWM_Trigger (ARM_TIM_NUM tim, ARM_TIM_CHANNEL channel)
             break;
         default:
             result = ARM_DRIVER_ERROR;
-            break;
+            return result;
     }
 
-    if (my_tim.type == ADVANCED)
-    {
+    if (my_tim.type == ADVANCED) {
         my_tim.tim->BDTR |= (1 << TIM_BDTR_MOE_Pos);
     }
     my_tim.tim->CR1 |= (1 << TIM_CR1_CEN_Pos);
@@ -180,23 +204,38 @@ static int32_t TIM_PWM_Trigger (ARM_TIM_NUM tim, ARM_TIM_CHANNEL channel)
     return result;
 }
 
-ARM_DRIVER_TIM_PWM Driver_TIM0 = {
-    TIM_PWM_Setup,
-    TIM_PWM_SetMode,
-    TIM_PWM_SetDuty,
-    TIM_PWM_Trigger
-};
-
+ARM_DRIVER_TIM_PWM Driver_TIM0 = {TIM_PWM_Setup, TIM_PWM_SetMode, TIM_PWM_SetDuty, TIM_PWM_Trigger};
 
 /**
- * @brief Config channel 1 and 2, enable filter each 8 pulses, disable input capture and non inverter.
+ * @brief Config channel 1 and 2, enable filter each 8 pulses, disable input
+ * capture and non inverter.
  */
-static int32_t TIM_ENCODER_Setup (ARM_TIM_NUM tim)
-{
+static int32_t TIM_ENCODER_Setup(ARM_TIM_NUM tim) {
     int32_t result = ARM_DRIVER_OK;
-
     TIM_t my_tim;
-    TIM_Convert(&my_tim, tim);
+
+    if (TIM_Convert(&my_tim, tim) == ARM_DRIVER_ERROR) {
+        result = ARM_DRIVER_ERROR;
+        return result;
+    }
+
+    switch (tim) {
+    case ARM_TIM_1:
+        RCC_TIM1_CLK_EN();
+        break;
+    case ARM_TIM_2:
+        RCC_TIM2_CLK_EN();
+        break;
+    case ARM_TIM_3:
+        RCC_TIM3_CLK_EN();
+        break;
+    case ARM_TIM_4:
+        RCC_TIM4_CLK_EN();
+        break;
+    default:
+        /* Can not reach here */
+        break;
+    }
 
     /* Load value into ARR reg*/
     my_tim.tim->ARR = 0xFFFF;
@@ -225,17 +264,18 @@ static int32_t TIM_ENCODER_Setup (ARM_TIM_NUM tim)
 }
 
 /**
- * @brief Choose mode for encoder, enbale count.
+ * @brief Choose mode for encoder, enable count.
  */
-static int32_t TIM_ENCODER_SetMode (ARM_TIM_NUM tim, ARM_ENCODER_MODE mode)
-{
+static int32_t TIM_ENCODER_SetMode(ARM_TIM_NUM tim, ARM_ENCODER_MODE mode) {
     int32_t result = ARM_DRIVER_OK;
-
     TIM_t my_tim;
-    TIM_Convert(&my_tim, tim);
 
-    switch (mode)
-    {
+    if (TIM_Convert(&my_tim, tim) == ARM_DRIVER_ERROR) {
+        result = ARM_DRIVER_ERROR;
+        return result;
+    }
+
+    switch (mode) {
         case ARM_UP_EDGE:
             /* Does not support yet */
             result = ARM_DRIVER_ERROR_PARAMETER;
@@ -243,7 +283,7 @@ static int32_t TIM_ENCODER_SetMode (ARM_TIM_NUM tim, ARM_ENCODER_MODE mode)
         case ARM_DOWN_EDGE:
             /* Does not support yet */
             result = ARM_DRIVER_ERROR_PARAMETER;
-             break;
+            break;
         case ARM_EITHER_EDGE:
             my_tim.tim->SMCR &= ~(0b111 << TIM_SMCR_SMS_Pos);
             my_tim.tim->SMCR |= (0b011 << TIM_SMCR_SMS_Pos);
@@ -266,10 +306,12 @@ static int32_t TIM_ENCODER_SetMode (ARM_TIM_NUM tim, ARM_ENCODER_MODE mode)
 /**
  * @brief Get count from encoder.
  **/
-static uint32_t TIM_ENCODER_GetCount (ARM_TIM_NUM tim)
-{
+static int32_t TIM_ENCODER_GetCount(ARM_TIM_NUM tim) {
     TIM_t my_tim;
-    TIM_Convert(&my_tim, tim);
+
+    if (TIM_Convert(&my_tim, tim) == ARM_DRIVER_ERROR) {
+        return -1;
+    }
 
     return my_tim.tim->CNT;
 }
@@ -277,18 +319,16 @@ static uint32_t TIM_ENCODER_GetCount (ARM_TIM_NUM tim)
 /**
  * @brief Get direction from encoder.
  **/
-static uint8_t TIM_ENCODER_GetDirection (ARM_TIM_NUM tim)
-{
+static int32_t TIM_ENCODER_GetDir(ARM_TIM_NUM tim) {
+    uint8_t dir;
     TIM_t my_tim;
-    TIM_Convert(&my_tim, tim);
-    uint8_t dir = ((my_tim.tim->CR1 & (1 << TIM_CR1_DIR_Pos)) >> TIM_CR1_DIR_Pos);
+    if (TIM_Convert(&my_tim, tim) == ARM_DRIVER_ERROR) {
+        return -1;
+    }
+    dir = ((my_tim.tim->CR1 & (1 << TIM_CR1_DIR_Pos)) >> TIM_CR1_DIR_Pos);
 
     return dir;
 }
 
-ARM_DRIVER_TIM_ENCODER Driver_TIM1 = {
-    TIM_ENCODER_Setup,
-    TIM_ENCODER_SetMode,
-    TIM_ENCODER_GetCount,
-    TIM_ENCODER_GetDirection
-};
+ARM_DRIVER_TIM_ENCODER Driver_TIM1 = {TIM_ENCODER_Setup, TIM_ENCODER_SetMode, TIM_ENCODER_GetCount,
+                                      TIM_ENCODER_GetDir};

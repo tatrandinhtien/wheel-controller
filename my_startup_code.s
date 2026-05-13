@@ -104,6 +104,7 @@ Reset_Handler:
 	ldr r1, =_sdata
 	ldr r2, =_edata
 	ldr r3, =_sidata
+
 	b copy_data_init_loop
 
 copy_data_init:

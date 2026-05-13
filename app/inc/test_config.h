@@ -82,6 +82,11 @@
 /**
  * @brief Console constant
  */
-#define CONSOLE_TEST        ENABLE
+#define CONSOLE_TEST        DISABLE
+
+/**
+ * @brief Console constant
+ */
+#define CAN_TEST            ENABLE
 
 #endif /* TEST_CONFIG_H */

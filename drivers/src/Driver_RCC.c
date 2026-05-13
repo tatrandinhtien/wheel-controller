@@ -16,17 +16,18 @@
  * @brief Configure the SYSCLK up to 72 Mhz
  *
  */
-int32_t RCC_SystemClock_72Mhz(void)
-{
+int32_t RCC_SystemClock_72Mhz(void) {
     int res = ARM_DRIVER_OK;
 
     /* Turn on HSE and wait until its stable */
     RCC->CR |= (1U << RCC_CR_HSEON_Pos);
-    while(!((RCC->CR & (1U << RCC_CR_HSERDY_Pos)) >> RCC_CR_HSERDY_Pos));
+    while (!((RCC->CR & (1U << RCC_CR_HSERDY_Pos)) >> RCC_CR_HSERDY_Pos))
+        ;
 
     /* Enable the prefetch buffer */
     FLASH->ACR |= (1U << FLASH_ACR_PRFTBE_Pos);
-    while(!((FLASH->ACR & (1U << FLASH_ACR_PRFTBS_Pos)) >> FLASH_ACR_PRFTBS_Pos));
+    while (!((FLASH->ACR & (1U << FLASH_ACR_PRFTBS_Pos)) >> FLASH_ACR_PRFTBS_Pos))
+        ;
 
     /* 2 wait states */
     FLASH->ACR &= ~(0x7U << FLASH_ACR_LATENCY_Pos);
@@ -46,16 +47,16 @@ int32_t RCC_SystemClock_72Mhz(void)
 
     /* Enable PLL */
     RCC->CR |= (1U << RCC_CR_PLLON_Pos);
-    while(!((RCC->CR & (1U << RCC_CR_PLLRDY_Pos)) >> RCC_CR_PLLRDY_Pos));
+    while (!((RCC->CR & (1U << RCC_CR_PLLRDY_Pos)) >> RCC_CR_PLLRDY_Pos))
+        ;
 
     /* System clock switch */
     RCC->CFGR &= ~(0x3U << RCC_CFGR_SW_Pos);
     RCC->CFGR |= (0b10U << RCC_CFGR_SW_Pos);
-    while(((RCC->CFGR & (0x3 << RCC_CFGR_SWS_Pos)) >> RCC_CFGR_SWS_Pos) != 0b10);
+    while (((RCC->CFGR & (0x3 << RCC_CFGR_SWS_Pos)) >> RCC_CFGR_SWS_Pos) != 0b10)
+        ;
 
     return res;
 }
 
-ARM_DRIVER_RCC Driver_RCC0 = {
-    RCC_SystemClock_72Mhz
-};
+ARM_DRIVER_RCC Driver_RCC0 = {RCC_SystemClock_72Mhz};

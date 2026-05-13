@@ -3,6 +3,7 @@
 #include "test_gpio.h"
 #include "test_timer.h"
 #include "test_console.h"
+#include "test_can.h"
 
 int main(void) {
     __enable_irq();
@@ -17,6 +18,11 @@ int main(void) {
     #if (CONSOLE_TEST == ENABLE)
     test_console_run();
     #endif
+
+    #if (CAN_TEST == ENABLE)
+    test_can_run();
+    #endif
+
 
     return 0;
 }

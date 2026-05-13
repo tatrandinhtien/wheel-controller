@@ -50,8 +50,8 @@ typedef struct
 {
     int32_t (*Setup) (ARM_TIM_NUM tim);
     int32_t (*SetMode) (ARM_TIM_NUM tim, ARM_ENCODER_MODE mode);
-    uint32_t (*GetCount) (ARM_TIM_NUM tim);
-    uint8_t (*GetDir) (ARM_TIM_NUM);
+    int32_t (*GetCount) (ARM_TIM_NUM tim);
+    int32_t (*GetDir) (ARM_TIM_NUM);
 } ARM_DRIVER_TIM_ENCODER;
 
 #ifdef __cplusplus

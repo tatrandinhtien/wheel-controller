@@ -1,5 +1,5 @@
-INCLUDE += -I os/FreeRTOS/include
-INCLUDE += -I os/FreeRTOS/portable/GCC/ARM_CM3
+INC += -Ios/FreeRTOS/include
+INC += -Ios/FreeRTOS/portable/GCC/ARM_CM3
 
 
 SRCS +=	os/FreeRTOS/croutine.c					\
