@@ -6,21 +6,24 @@ extern "C"
 {
 #endif
 
+#include <stdio.h>
 #include <stdbool.h>
 #include <stdint.h>
+#include <string.h>
 
 typedef struct {
-	uint8_t* buffer;
-	uint16_t size;
+	uint8_t *pdata;
 	volatile uint16_t head;
 	volatile uint16_t tail;
-} UART_TX_Buffer_t;
+	uint16_t capacity;
+} ring_buffer_t;
 
-void uart_tx_buffer_init(UART_TX_Buffer_t* tx, uint8_t* storage, uint16_t size);
-bool uart_tx_buffer_is_empty(const UART_TX_Buffer_t* tx);
-bool uart_tx_buffer_is_full(const UART_TX_Buffer_t* tx);
-bool uart_tx_buffer_put(UART_TX_Buffer_t* tx, uint8_t c);
-bool uart_tx_buffer_get(UART_TX_Buffer_t* tx, uint8_t* c);
+bool rb_init(ring_buffer_t *rb, uint8_t *data, uint16_t len);
+bool rb_is_empty(ring_buffer_t *rb);
+bool rb_is_full(ring_buffer_t *rb);
+bool rb_get(ring_buffer_t *rb);
+bool rb_put(ring_buffer_t *rb, uint8_t data);
+
 
 #ifdef __cplusplus
 }
