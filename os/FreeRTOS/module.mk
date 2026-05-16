@@ -10,4 +10,5 @@ SRCS +=	os/FreeRTOS/croutine.c					\
 		os/FreeRTOS/tasks.c         			\
 		os/FreeRTOS/timers.c					\
 		os/FreeRTOS/portable/MemMang/heap_4.c	\
-		os/FreeRTOS/portable/GCC/ARM_CM3/port.c
+		os/FreeRTOS/portable/GCC/ARM_CM3/port.c	\
+		os/FreeRTOS/cmsis_os2.c					\

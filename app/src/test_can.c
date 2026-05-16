@@ -1,7 +1,7 @@
 #include "test_can.h"
-#include "can_bus.h"
+#include "bsp_can.h"
 #include "Driver_CAN.h"
-#include "console.h"
+#include "bsp_console.h"
 #include "test_config.h"
 #include "Driver_GPIO.h"
 #include "Driver_RCC.h"
@@ -28,7 +28,7 @@ static void delay(uint32_t time) {
 
 void test_can_run(void) {
 #if CURRENT_NODE_ROLE == NODE_ROLE_MASTER
-    console_init();
+    BSP_Console_Init();
     setvbuf(stdout, NULL, _IONBF, 0);
 #endif
 
@@ -40,10 +40,7 @@ void test_can_run(void) {
     Driver_GPIO0.SetOutput(LED, OFF); // Tắt LED (PC13 active low)
 
     // 2. Initialize CAN at 500kbps
-    CAN_Bus_Init(500000);
-    
-    // Switch to Normal Mode for actual physical bus communication
-    Driver_CAN0.SetMode(ARM_CAN_MODE_NORMAL);
+    BSP_CAN_Init(500000);
 
 #if CURRENT_NODE_ROLE == NODE_ROLE_MASTER
 
@@ -53,7 +50,7 @@ void test_can_run(void) {
     
     while (1) {
         printf("[MASTER] Sending Command: %d ... ", tx_data[0]);
-        int32_t sent = CAN_Bus_Send(MASTER_TX_ID, tx_data, 1);
+        int32_t sent = BSP_CAN_Send(MASTER_TX_ID, tx_data, 1);
         if (sent > 0) {
             printf("OK!\r\n");
         } else {
@@ -63,12 +60,12 @@ void test_can_run(void) {
         delay(1000000); // Give slave a moment to reply
 
         // Receive response from Slave
-        ARM_CAN_MSG_INFO rx_info = {0};
+        uint32_t rx_id = 0;
         uint8_t rx_data[8] = {0};
-        int32_t read_bytes = Driver_CAN0.MessageRead(1, &rx_info, rx_data, 8);
+        int32_t read_bytes = BSP_CAN_Receive(&rx_id, rx_data, 8);
         
         if (read_bytes > 0) {
-            printf("[MASTER] Received from 0x%03lX: ", rx_info.id);
+            printf("[MASTER] Received from 0x%03lX: ", rx_id);
             for (int i = 0; i < read_bytes; i++) printf("%02X ", rx_data[i]);
             printf("\r\n");
         }
@@ -82,18 +79,18 @@ void test_can_run(void) {
         led_state = (led_state == ON) ? OFF : ON;
 
         printf("------------------------------------------\r\n");
-        delay(5000000); // interval between packets
+        delay(50000); // interval between packets
     }
 
 #elif CURRENT_NODE_ROLE == NODE_ROLE_SLAVE
 
     while (1) {
-        ARM_CAN_MSG_INFO rx_info = {0};
+        uint32_t rx_id = 0;
         uint8_t rx_data[8] = {0};
+
+        int32_t read_bytes = CAN_Bus_Receive(&rx_id, rx_data, 8);
         
-        int32_t read_bytes = Driver_CAN0.MessageRead(1, &rx_info, rx_data, 8);
-        
-        if (read_bytes > 0 && rx_info.id == MASTER_TX_ID) {
+        if (read_bytes > 0 && rx_id == MASTER_TX_ID) {
             uint8_t reply_data[8] = {0xAA, 0xBB, 0x00}; // ACK format
 
             if (rx_data[0] == 1) {

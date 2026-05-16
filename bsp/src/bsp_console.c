@@ -1,9 +1,10 @@
-#include "console.h"
+#include "bsp_console.h"
 #include "Driver_USART.h"
+#include <string.h>
 
 extern ARM_DRIVER_USART Driver_USART1;
 
-void console_init(void) {
+void BSP_Console_Init(void) {
 
     Driver_USART1.Initialize(NULL);
     Driver_USART1.PowerControl(ARM_POWER_FULL);
@@ -27,3 +28,9 @@ int _write(int file, char* ptr, int len) {
     return len;
 }
 
+void BSP_Console_Print(const char *str) {
+    if (str == NULL) return;
+    size_t len = strlen(str);
+    if (len == 0) return;
+    Driver_USART1.Send((const uint8_t *)str, (uint32_t)len);
+}

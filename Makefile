@@ -37,17 +37,21 @@ GENERAL_FLAGS = -O0 -g3 					\
 				--specs=nano.specs  		\
 				-fsingle-precision-constant
 
-CFLAGS  = $(CPU) $(DEFINES) $(INC) $(GENERAL_FLAGS) -std=c99 -MF"$(@:%.o=%.d)"
+CFLAGS 	 = $(CPU) $(DEFINES) $(INC) $(GENERAL_FLAGS)
+CFLAGS	+= -std=c99 -MF"$(@:%.o=%.d)"
+CFLAGS	+= -DCMSIS_device_header=\"stm32f103xb.h\"
+
 CXXFLAGS = $(CPU) $(DEFINES) $(INC) $(GENERAL_FLAGS) -std=c++11 -MF"$(@:%.o=%.d)"
 
 LDFLAGS = $(CPU)									\
-		 -Tmy_linker_script.ld 				\
+		 -Tmy_linker_script.ld 						\
 		 -Wl,-Map=$(BUILD_DIR)/$(TARGET).map,--cref	\
 		 -Wl,--gc-sections --specs=nano.specs --specs=nosys.specs -u _printf_float
 
 OBJS	 = $(addprefix $(BUILD_DIR)/, $(SRCS:.c=.o))
 ASM_OBJS = $(addprefix $(BUILD_DIR)/, $(ASM_SRCS:.s=.o))
 
+.PHONY:	all clean print_size flash
 
 all: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).bin print_size
 
@@ -83,4 +87,3 @@ flash: all
 
 -include $(wildcard $(BUILD_DIR)/**/*.d)
 
-.PHONY:	all clean print_size flash

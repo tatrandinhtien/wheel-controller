@@ -291,9 +291,20 @@ static int32_t ARM_USART1_Send(const void* data, uint32_t num) {
     return ARM_DRIVER_OK;
 }
 
-static int32_t ARM_USART1_Receive(void* data, uint32_t num) {}
+static int32_t ARM_USART1_Receive(void* data, uint32_t num) {
+    (void) data;
+    (void) num;
 
-static int32_t ARM_USART1_Transfer(const void* data_out, void* data_in, uint32_t num) {}
+    return ARM_DRIVER_ERROR_UNSUPPORTED;
+}
+
+static int32_t ARM_USART1_Transfer(const void* data_out, void* data_in, uint32_t num) {
+    (void) data_out;
+    (void) data_in;
+    (void) num;
+
+    return ARM_DRIVER_ERROR_UNSUPPORTED;
+}
 
 static uint32_t ARM_USART1_GetTxCount(void) {
     USART_Context_t* ctx;
@@ -475,9 +486,8 @@ static ARM_USART_MODEM_STATUS ARM_USART1_GetModemStatus(void) {
     return ctx->modem_status;
 }
 
-static void ARM_USART1_SignalEvent(uint32_t event) {
-    // function body
-}
+// static void ARM_USART1_SignalEvent(uint32_t event) {
+// }
 
 void USART1_IRQHandler(void) {
     USART_Context_t* ctx;

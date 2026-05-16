@@ -1,5 +1,5 @@
 #include "test_console.h"
-#include "console.h"
+#include "bsp_console.h"
 #include "test_config.h"
 
 #include "test_gpio.h"
@@ -24,13 +24,12 @@ static void delay(uint32_t time) {
 }
 
 void test_console_run(void) {
-    uint32_t counter = 0;
     RCC_GPIOC_CLK_EN();
     Driver_GPIO0.Setup(LED, NULL);
     Driver_GPIO0.SetDirection(LED, ARM_GPIO_OUTPUT);
     Driver_GPIO0.SetOutputMode(LED, ARM_GPIO_PUSH_PULL);
 
-    console_init();
+    BSP_Console_Init();
 
     // Disable stdout buffering for embedded systems
     setvbuf(stdout, NULL, _IONBF, 0);

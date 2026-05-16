@@ -17,6 +17,8 @@ This is an **embedded motor control system** designed for a wheeled autonomous v
 - **H-Bridge Motor Driver** (e.g., ddri0042) control
 - **Servo Control** for steering/manipulation
 - **RS485 Communication** (modular slave architecture)
+- **CAN Communication** (message-oriented, implemented on STM32F1)
+- **Note:** The `Example/` folder contains legacy Arduino code that used RS485; that RS485 mention comes from the old Arduino example and is not the primary STM32 implementation. Use the Arduino RS485 code only as an algorithm reference when migrating to CAN.
 - **Real-time Task Management** using FreeRTOS preemptive scheduler
 - **UART Console Interface** for debugging/monitoring
 
@@ -112,28 +114,26 @@ app/
 ```
 bsp/
 ├── src/
-│   ├── console.c              # UART serial communication
-│   ├── h_bridge.c             # DC motor H-Bridge control (ddri0042)
+│   ├── bsp_console.c          # UART serial communication (BSP wrapper)
+│   ├── bsp_hbridge.c          # DC motor H-Bridge control (ddri0042)
 │   │                           # - Handles PWM + direction logic
-│   ├── encoder.c              # Quadrature decoder (STM32 HW)
+│   ├── bsp_encoder.c          # Quadrature decoder (STM32 HW)
 │   │                           # - Overflow/underflow handling
-│   ├── servo.c                # Servo PWM control (0-180°)
+│   ├── bsp_servo.c            # Servo PWM control (0-180°)
 │   
 └── inc/
-    ├── console.h              # void console_init()
-    ├── h_bridge.h             # void BSP_HBridge_Init()
-    │                           # void BSP_HBridge_SetSpeed(int16_t %)
-    │                           # void BSP_HBridge_Brake()
-    ├── encoder.h              # void BSP_Encoder_Init()
-    │                           # int16_t BSP_Encoder_GetDelta()
-    │                           # void BSP_Encoder_Reset()
-    └── servo.h                # Servo control APIs
+    ├── bsp_console.h         # void BSP_Console_Init()
+    ├── bsp_hbridge.h         # void BSP_HBridge_Init()
+    │                           # void BSP_HBridge_SetSpeed(float percentage)
+    ├── bsp_encoder.h         # void BSP_Encoder_Init()
+    │                           # float BSP_Encoder_GetSpeedRPM()
+    └── bsp_servo.h           # Servo control APIs
 ```
 
 **Key Abstractions:**
-- `BSP_HBridge_SetSpeed(speed_percent)` → Auto-handles ±100% → PWM + direction pins
-- `BSP_Encoder_GetDelta()` → Returns delta pulses since last call (signed)
-- `BSP_Encoder_Reset()` → Clear counter for new motion cycle
+- `BSP_HBridge_SetSpeed(percentage)` → Auto-handles ±100% → PWM + direction pins
+- `BSP_Encoder_GetSpeedRPM()` → Returns motor speed in RPM (float)
+- `BSP_Encoder_Init()` → Initialize encoder hardware/timer interface
 
 ---
 
@@ -245,6 +245,7 @@ Example/
 - [ ] **Motor PID Control** - Implement feedback loop (reference: Example/)
 - [ ] **Servo Control BSP** - PWM angle mapping (0-180°)
 - [ ] **RS485 Slave Protocol** - Multi-device communication (from Example/)
+- [ ] **CAN Protocol Migration** - Replace legacy RS485 protocol with CAN-based messaging (split payload into 8-byte frames or redesign)
 - [ ] **Advanced Testing** - Integration tests on actual hardware
 - [ ] **Documentation** - Doxygen comments for all BSP APIs
 - [ ] **Optimization** - Performance profiling, interrupt latency
@@ -369,10 +370,10 @@ The `Example/` folder contains Arduino Micro Pro code. Key differences:
 - [Test Configuration](app/inc/test_config.h)
 - [Build System](Makefile)
 - [FreeRTOS Config](app/inc/FreeRTOSConfig.h)
-- [H-Bridge API](bsp/inc/h_bridge.h)
-- [Encoder API](bsp/inc/encoder.h)
+- [H-Bridge API](bsp/inc/bsp_hbridge.h)
+- [Encoder API](bsp/inc/bsp_encoder.h)
 - [Legacy Arduino Reference](Example/Slave_test_Micro_10.4.ino)
 
 ---
 
-**Last Updated:** May 13, 2026
+**Last Updated:** May 16, 2026

@@ -7,14 +7,6 @@
 #include "Driver_RCC.h"
 #include "Driver_Timer.h"
 
-/**
- * @brief Software delay
- */
-static void delay(uint32_t time) {
-    while (time--) {
-        __asm("nop");
-    }
-}
 
 #ifdef TIMER_TEST
 

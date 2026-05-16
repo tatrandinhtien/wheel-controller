@@ -1,4 +1,4 @@
-#include "can_bus.h"
+#include "bsp_can.h"
 #include "Driver_CAN.h"
 #include <stddef.h>
 
@@ -12,7 +12,7 @@ static void CAN_SignalEvent(uint32_t obj_idx, uint32_t event) {
     }
 }
 
-void CAN_Bus_Init(uint32_t bitrate) {
+void BSP_CAN_Init(uint32_t bitrate) {
     // 1. Initialize CAN Driver
     Driver_CAN0.Initialize(NULL, CAN_SignalEvent);
 
@@ -35,10 +35,24 @@ void CAN_Bus_Init(uint32_t bitrate) {
     Driver_CAN0.SetMode(ARM_CAN_MODE_NORMAL);
 }
 
-int32_t CAN_Bus_Send(uint32_t id, const uint8_t *data, uint8_t dlc) {
+int32_t BSP_CAN_Send(uint32_t id, const uint8_t *data, uint8_t dlc) {
     ARM_CAN_MSG_INFO msg_info = {0};
     msg_info.id = id;
     msg_info.rtr = 0;
 
     return Driver_CAN0.MessageSend(0, &msg_info, data, dlc);
+}
+
+int32_t BSP_CAN_Receive(uint32_t *id, uint8_t *data, uint8_t size) {
+    if (id == NULL || data == NULL) {
+        return ARM_DRIVER_ERROR_PARAMETER;
+    }
+
+    ARM_CAN_MSG_INFO msg_info = {0};
+    int32_t result = Driver_CAN0.MessageRead(1, &msg_info, data, size);
+    if (result > 0) {
+        *id = msg_info.id;
+    }
+
+    return result;
 }
