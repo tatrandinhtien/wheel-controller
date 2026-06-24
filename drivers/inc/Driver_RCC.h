@@ -49,9 +49,11 @@ extern "C"
 typedef struct
 {
     /**
-     * @brief  Configures the main system clock distribution (PLL, HSE, HSI).
-     * @retval ARM_DRIVER_OK: Clock configuration set successfully.
-     * @retval ARM_DRIVER_ERROR: Hardware failure or timeout during clock switch.
+     * @brief  Initializes the system clock tree to 72 MHz using HSE and PLL reference sources.
+     * @note   Configures AHB to 72MHz, APB1 to 36MHz (max internal physical limit), and APB2 to 72MHz.
+     * Ensures Flash access latency is adjusted to 2 wait states before the final clock switch occurs.
+     * @retval ARM_DRIVER_OK: System clock initialized successfully at 72MHz.
+     * @retval ARM_DRIVER_ERROR: Hardware timeout failure while waiting for stable oscillator states.
      */
     int32_t (*SetSystemClock) (void);
 } ARM_DRIVER_RCC;
