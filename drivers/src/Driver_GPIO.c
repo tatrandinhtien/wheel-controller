@@ -1,48 +1,68 @@
 /**
  * @file    Driver_GPIO.c
- * @author  dt (tien.ta.eswe@gmail.com)
- * @brief   Driver for GPIO with these function:
- *          - Register Callback for interrupt.
- *          - Read status of pin.
- *          - Write value to pin.
- *          - Config Output mode push/pull or open drain.
- *          - Config Input mode pullup/pulldown.
- * @version 0.1
- * @date 2026-04-04
- *
- * @copyright Copyright (c) 2026
- *
- */
+ * @author  DinhTien (tien.ta.eswe@gmail.com)
+ * @brief   GPIO Peripheral Driver implementation following CMSIS-Driver standard.
+ * @details This driver manages GPIO port/pin mapping, input/output configurations,
+ * internal pull-up/pull-down resistors, and external interrupt (EXTI) 
+ * handling with dynamic callback registration for STM32F103 MCU.
+ * @version 1.0
+ * @date    2026-04-04
+ * * @copyright Copyright (c) 2026
+ * */
 
 #include "Driver_GPIO.h"
 #include "Driver_RCC.h"
 #include "stm32f103xb.h"
 
-#define GPIO_MAX_PINS 48U
-#define PIN_IS_AVAILABLE(n) ((n) < GPIO_MAX_PINS)
-#define GPIO_NUMS 3U
-#define PINS_OF_PORT 16U
-
 /********************************************************************
  * Definitions
  ********************************************************************/
+
+#define GPIO_MAX_PINS 48U                           /**< Maximum number of pins supported across standard ports (A, B, C). */
+#define PIN_IS_AVAILABLE(n) ((n) < GPIO_MAX_PINS)   /**< Macro to validate if a pin number is within acceptable range. */
+#define GPIO_NUMS 3U                                /**< Total number of handled GPIO ports (GPIOA to GPIOC). */
+#define PINS_OF_PORT 16U                            /**< Number of pins per individual GPIO port. */
+
+/**
+ * @brief  Internal structure representing an unpacked GPIO pin configuration.
+ */
 typedef struct {
-    GPIO_TypeDef* gpio;
-    uint8_t port_num;
-    uint8_t pin_num;
+    GPIO_TypeDef* gpio;     /**< Pointer to the CMSIS peripheral register base (e.g., GPIOA). */
+    uint8_t port_num;       /**< Numeric index representing the port (0=A, 1=B, 2=C). */
+    uint8_t pin_num;        /**< Bit position index representing the specific pin (0 to 15). */
 } GPIO_t;
 
-static GPIO_TypeDef* gpio_arr[GPIO_NUMS] = {GPIOA, GPIOB, GPIOC};
-static ARM_GPIO_SignalEvent_t gpio_callback_event[PINS_OF_PORT];
-static uint8_t gpio_exti_active_pin[PINS_OF_PORT];
-static GPIO_TypeDef* gpio_exti_active_port[PINS_OF_PORT];
+/*******************************************************************************
+ * Prototypes
+ ******************************************************************************/
+
+static void GPIO_ResetStruct(GPIO_t* my_gpio);
+static void GPIO_ConvertPin(ARM_GPIO_Pin_t pin, GPIO_t* my_gpio);
+static int32_t GPIO_Setup(ARM_GPIO_Pin_t pin, ARM_GPIO_SignalEvent_t cb_event);
+static int32_t GPIO_SetDirection(ARM_GPIO_Pin_t pin, ARM_GPIO_DIRECTION direction);
+static int32_t GPIO_SetOutputMode(ARM_GPIO_Pin_t pin, ARM_GPIO_OUTPUT_MODE mode);
+static int32_t GPIO_SetPullResistor(ARM_GPIO_Pin_t pin, ARM_GPIO_PULL_RESISTOR resistor);
+static int32_t GPIO_SetEventTrigger(ARM_GPIO_Pin_t pin, ARM_GPIO_EVENT_TRIGGER trigger);
+static void GPIO_SetOutput(ARM_GPIO_Pin_t pin, uint32_t val);
+static uint32_t GPIO_GetInput(ARM_GPIO_Pin_t pin);
+
+/*******************************************************************************
+ * Variables
+ ******************************************************************************/
+
+static GPIO_TypeDef* gpio_arr[GPIO_NUMS] = {GPIOA, GPIOB, GPIOC};   /**< Lookup array for port base addresses. */
+static ARM_GPIO_SignalEvent_t gpio_callback_event[PINS_OF_PORT];    /**< Array of registered function pointers for callbacks. */
+static uint8_t gpio_exti_active_pin[PINS_OF_PORT];                  /**< Mapping from EXTI line index back to raw pin number. */
+static GPIO_TypeDef* gpio_exti_active_port[PINS_OF_PORT];           /**< Reference to active port mapping for interrupt verification. */
 
 /********************************************************************
- * Helper function
+ * Code
  ********************************************************************/
+
 /**
- * @brief Reset value of GPIO struct.
- *
+ * @brief  Resets the members of the internal GPIO_t structure to safe default values.
+ * @param  my_gpio: Pointer to the GPIO workspace structure to be cleared.
+ * @return None
  */
 static void GPIO_ResetStruct(GPIO_t* my_gpio) {
     my_gpio->gpio = NULL;
@@ -51,8 +71,10 @@ static void GPIO_ResetStruct(GPIO_t* my_gpio) {
 }
 
 /**
- * @brief Convert port, pin number, gpio register.
- *
+ * @brief  Converts a linear CMSIS-style pin index into discrete port, pin, and register base references.
+ * @param  pin: The linear absolute pin number (e.g., pin 16 maps to Port B, pin 0).
+ * @param  my_gpio: Pointer to the destination GPIO structure to hold the parsed results.
+ * @return None
  */
 static void GPIO_ConvertPin(ARM_GPIO_Pin_t pin, GPIO_t* my_gpio) {
     if (my_gpio != NULL) {
@@ -62,12 +84,12 @@ static void GPIO_ConvertPin(ARM_GPIO_Pin_t pin, GPIO_t* my_gpio) {
     }
 }
 
-/********************************************************************
- * GPIO Driver Function
- ********************************************************************/
 /**
- * @brief Set up GPIO interface.
- *
+ * @brief  Initializes and enables clock routing for the target GPIO port, and optionally configures EXTI.
+ * @param  pin: Absolute pin number to be initialized.
+ * @param  cb_event: Callback function handler to attach to the external interrupt line. Pass NULL if not using interrupts.
+ * @retval ARM_DRIVER_OK: Initialization completed successfully.
+ * @retval ARM_GPIO_ERROR_PIN: Given pin parameter is out of bounds or invalid.
  */
 static int32_t GPIO_Setup(ARM_GPIO_Pin_t pin, ARM_GPIO_SignalEvent_t cb_event) {
     int32_t result = ARM_DRIVER_OK;
@@ -141,8 +163,13 @@ static int32_t GPIO_Setup(ARM_GPIO_Pin_t pin, ARM_GPIO_SignalEvent_t cb_event) {
 }
 
 /**
- * @brief Set GPIO direction.
- *
+ * @brief  Configures the direction mode (Input, Output, or Alternate Function Output) of a specific pin.
+ * @note   Applies configuration changes straight to STM32 CRL/CRH registers with fixed 2MHz slew rate for outputs.
+ * @param  pin: Absolute pin number to be configured.
+ * @param  direction: Target direction enum value (@ref ARM_GPIO_DIRECTION).
+ * @retval ARM_DRIVER_OK: Configuration written successfully.
+ * @retval ARM_DRIVER_ERROR_PARAMETER: Invalid direction flag passed.
+ * @retval ARM_GPIO_ERROR_PIN: Specified pin index is invalid.
  */
 static int32_t GPIO_SetDirection(ARM_GPIO_Pin_t pin, ARM_GPIO_DIRECTION direction) {
     int32_t result = ARM_DRIVER_OK;
@@ -185,8 +212,12 @@ static int32_t GPIO_SetDirection(ARM_GPIO_Pin_t pin, ARM_GPIO_DIRECTION directio
 }
 
 /**
- * @brief Set GPIO output mode.
- *
+ * @brief  Sets the output driver hardware configuration (Push-Pull, Open-Drain) for standard or AFIO usage.
+ * @param  pin: Absolute pin number to adjust.
+ * @param  mode: Selected electrical output behavior enum (@ref ARM_GPIO_OUTPUT_MODE).
+ * @retval ARM_DRIVER_OK: Configuration written successfully.
+ * @retval ARM_DRIVER_ERROR_PARAMETER: Invalid mode flag passed.
+ * @retval ARM_GPIO_ERROR_PIN: Specified pin index is out of bounds.
  */
 static int32_t GPIO_SetOutputMode(ARM_GPIO_Pin_t pin, ARM_GPIO_OUTPUT_MODE mode) {
     int32_t result = ARM_DRIVER_OK;
@@ -232,8 +263,13 @@ static int32_t GPIO_SetOutputMode(ARM_GPIO_Pin_t pin, ARM_GPIO_OUTPUT_MODE mode)
 }
 
 /**
- * @brief Set GPIO pull resistor.
- *
+ * @brief  Enables, disables, or configures the internal Pull-up/Pull-down resistor network for an input pin.
+ * @note   Leverages STM32F1 BSRR / ODR trick to transition between pull-up and pull-down states.
+ * @param  pin: Absolute pin number to configure.
+ * @param  resistor: Desired configuration structure enum (@ref ARM_GPIO_PULL_RESISTOR).
+ * @retval ARM_DRIVER_OK: Pull resistors altered successfully.
+ * @retval ARM_DRIVER_ERROR_PARAMETER: Invalid resistor setting argument.
+ * @retval ARM_GPIO_ERROR_PIN: Specified pin index is invalid.
  */
 static int32_t GPIO_SetPullResistor(ARM_GPIO_Pin_t pin, ARM_GPIO_PULL_RESISTOR resistor) {
     int32_t result = ARM_DRIVER_OK;
@@ -277,8 +313,12 @@ static int32_t GPIO_SetPullResistor(ARM_GPIO_Pin_t pin, ARM_GPIO_PULL_RESISTOR r
 }
 
 /**
- * @brief Set GPIO event trigger.
- *
+ * @brief  Sets up the EXTI peripheral line triggers (Rising, Falling, or Edge transitions).
+ * @param  pin: Absolute pin number acting as the external trigger line source.
+ * @param  trigger: Chosen condition flag to fire interrupts (@ref ARM_GPIO_EVENT_TRIGGER).
+ * @retval ARM_DRIVER_OK: Edge detection flags altered successfully.
+ * @retval ARM_DRIVER_ERROR_PARAMETER: Invalid edge classification argument.
+ * @retval ARM_GPIO_ERROR_PIN: Specified pin index is out of bounds.
  */
 static int32_t GPIO_SetEventTrigger(ARM_GPIO_Pin_t pin, ARM_GPIO_EVENT_TRIGGER trigger) {
     int32_t result = ARM_DRIVER_OK;
@@ -324,8 +364,10 @@ static int32_t GPIO_SetEventTrigger(ARM_GPIO_Pin_t pin, ARM_GPIO_EVENT_TRIGGER t
 }
 
 /**
- * @brief Set GPIO output.
- *
+ * @brief  Sets an output pin state to high logic (1) or low logic (0) using atomic bit set/reset operations.
+ * @param  pin: Absolute pin number to toggle.
+ * @param  val: Desired bit status (0 = Logic LOW, 1 = Logic HIGH).
+ * @return None
  */
 static void GPIO_SetOutput(ARM_GPIO_Pin_t pin, uint32_t val) {
     GPIO_t my_gpio;
@@ -349,8 +391,9 @@ static void GPIO_SetOutput(ARM_GPIO_Pin_t pin, uint32_t val) {
 }
 
 /**
- * @brief Get GPIO input.
- *
+ * @brief  Reads the physical binary state from the target peripheral's Input Data Register (IDR).
+ * @param  pin: Absolute pin number to poll.
+ * @return uint32_t: Returns 1 if the input pin is logic HIGH, or 0 if it is logic LOW.
  */
 static uint32_t GPIO_GetInput(ARM_GPIO_Pin_t pin) {
     uint32_t val = 0U;
@@ -366,19 +409,15 @@ static uint32_t GPIO_GetInput(ARM_GPIO_Pin_t pin) {
 }
 
 /**
- * @brief GPIO Driver structure.
- *
+ * @brief Global structure instance for interface capabilities binding.
  */
 ARM_DRIVER_GPIO Driver_GPIO0 = {GPIO_Setup,           GPIO_SetDirection,    GPIO_SetOutputMode,
                                 GPIO_SetPullResistor, GPIO_SetEventTrigger, GPIO_SetOutput,
                                 GPIO_GetInput};
 
-/********************************************************************
- * GPIO Interrupt Service Routine
- ********************************************************************/
 /**
- * @brief ISR of external interrupt line 0.
- *
+ * @brief  Interrupt Service Routine (ISR) serving EXTI line 0 transitions.
+ * @return None
  */
 void EXTI0_IRQHandler(void) {
     uint8_t check = (EXTI->PR & (1U << 0));
@@ -397,8 +436,8 @@ void EXTI0_IRQHandler(void) {
 }
 
 /**
- * @brief ISR of external interrupt line 1.
- *
+ * @brief  Interrupt Service Routine (ISR) serving EXTI line 1 transitions.
+ * @return None
  */
 void EXTI1_IRQHandler(void) {
     uint8_t check = (EXTI->PR & (1U << 1));
@@ -417,8 +456,8 @@ void EXTI1_IRQHandler(void) {
 }
 
 /**
- * @brief ISR of external interrupt line 2.
- *
+ * @brief  Interrupt Service Routine (ISR) serving EXTI line 2 transitions.
+ * @return None
  */
 void EXTI2_IRQHandler(void) {
     uint8_t check = (EXTI->PR & (1U << 2));
@@ -437,8 +476,8 @@ void EXTI2_IRQHandler(void) {
 }
 
 /**
- * @brief ISR of external interrupt line 3.
- *
+ * @brief  Interrupt Service Routine (ISR) serving EXTI line 3 transitions.
+ * @return None
  */
 void EXTI3_IRQHandler(void) {
     uint8_t check = (EXTI->PR & (1U << 3));
@@ -457,8 +496,8 @@ void EXTI3_IRQHandler(void) {
 }
 
 /**
- * @brief ISR of external interrupt line 4.
- *
+ * @brief  Interrupt Service Routine (ISR) serving EXTI line 4 transitions.
+ * @return None
  */
 void EXTI4_IRQHandler(void) {
     uint8_t check = (EXTI->PR & (1U << 4));
@@ -477,8 +516,8 @@ void EXTI4_IRQHandler(void) {
 }
 
 /**
- * @brief ISR of external interrupt line 5-9.
- *
+ * @brief  Shared Interrupt Service Routine (ISR) serving EXTI multiplexed lines 5 to 9.
+ * @return None
  */
 void EXTI9_5_IRQHandler(void) {
     uint8_t pin = 0;
@@ -499,8 +538,8 @@ void EXTI9_5_IRQHandler(void) {
 }
 
 /**
- * @brief ISR of external interrupt line 10-15.
- *
+ * @brief  Shared Interrupt Service Routine (ISR) serving EXTI multiplexed lines 10 to 15.
+ * @return None
  */
 void EXTI15_10_IRQHandler(void) {
     uint8_t pin = 0;
