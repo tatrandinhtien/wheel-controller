@@ -10,4 +10,4 @@ IndentCaseLabels: true
 AllowShortFunctionsOnASingleLine: Empty
 AllowShortIfStatementsOnASingleLine: Never
 SpaceBeforeParens: ControlStatements
-PointerAlignment: Left
+PointerAlignment: Left 
