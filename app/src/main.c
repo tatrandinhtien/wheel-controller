@@ -10,7 +10,9 @@
  */
 
 #include "cmsis_os2.h"
+
 #include "app_wheel_controller.h"
+
 #include "test_config.h"
 #include "test_gpio.h"
 #include "test_log.h"
@@ -18,6 +20,7 @@
 #include "test_servo.h"
 #include "test_motor.h"
 #include "test_encoder.h"
+
 #include "bsp_can.h"
 #include "bsp_encoder.h"
 #include "bsp_motor.h"
