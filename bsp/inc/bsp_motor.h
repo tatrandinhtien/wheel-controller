@@ -11,6 +11,7 @@
  * @copyright Copyright (c) 2026
  *
  */
+
 #ifndef BSP_MOTOR_H_
 #define BSP_MOTOR_H_
 
@@ -34,16 +35,18 @@ void BSP_Motor_Init(void);
 
 /**
  * @brief  Updates the motor running direction and rotational speed.
- * @param  speed: Signed speed factor bounded from -10000 to 10000 
- * (representing -100.00% reverse to +100.00% forward velocity).
+ * @details Handles software saturation and maps the speed value onto the 
+ * internal driver's proportional duty cycle range (0 to 10000).
+ * @param  speed: Signed speed directive factor bounded from -130 (max reverse) 
+ * to +130 (max forward velocity). A value of 0 triggers neutral idle.
  * @return None
  */
 void BSP_Motor_SetSpeed(int16_t speed);
 
 /**
  * @brief  Executes a hard electronic brake sequence on the H-Bridge.
- * @note   Short-circuits both motor terminals to ground (or VCC depending on hardware layout) 
- * to ignite rapid back-EMF counter-torque deceleration.
+ * @note   Short-circuits both motor terminals to ground to dissipate residual 
+ * kinetic energy via counter-electromotive forces.
  * @return None
  */
 void BSP_Motor_Brake(void);
