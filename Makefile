@@ -17,7 +17,7 @@ OBJDUMP		= $(PREFIX)objdump
 
 SRCS		=
 INC			=
-ASM_SRCS	= my_startup_code.s
+ASM_SRCS	= startup.s
 
 include app/module.mk
 include bsp/module.mk
@@ -43,7 +43,7 @@ CFLAGS	+= -DCMSIS_device_header=\"stm32f103xb.h\"
 CXXFLAGS = $(CPU) $(DEFINES) $(INC) $(GENERAL_FLAGS) -std=c++11 -MF"$(@:%.o=%.d)"
 
 LDFLAGS = $(CPU)									\
-		 -Tmy_linker_script.ld 						\
+		 -Tlinker.ld 						\
 		 -Wl,-Map=$(BUILD_DIR)/$(TARGET).map,--cref	\
 		 -Wl,--gc-sections --specs=nano.specs --specs=nosys.specs -u _printf_float
 
