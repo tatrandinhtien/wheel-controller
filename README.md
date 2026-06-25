@@ -20,10 +20,10 @@ This project was actively researched, developed, and validated within the **BOSC
 
 This specific repository hosts the complete source code, bare-metal peripheral drivers, and real-time scheduling logic for the **Wheel Controller Module**—the localized intelligent edge node deployed at each of the four wheel configurations.
 
-<center>
+<div align="center">
   <img src="docs/resources/images/hw_general_layout.png" alt="Hardware General Layout" width="600" />
-</center>
-<p align="center"><strong><em>Figure 1:</em></strong> Hardware General Layout of the Distributed System</p>
+  <p><b><em>Figure 1:</em></b> Hardware General Layout of the Distributed System</p>
+</div>
 
 ## 2. General Layout
 
@@ -33,24 +33,24 @@ The Wheel Controller Module operates as a localized intelligent actuator node de
 
 Its core hardware execution tasks include driving the steering RC servo, regulating the DC bridge motor, decoding high-resolution quadrature encoder signals for closed-loop feedback, and maintaining robust communication across the shared bxCAN bus network.
 
-<center>
+<div align="center">
   <img src="docs/resources/images/hardware_components.png" alt="Hardware Components Overview" width="600" />
-</center>
-<p align="center"><strong><em>Figure 2:</em></strong> Components Overview</p>
+  <p><b><em>Figure 2:</em></b> Components Overview</p>
+</div>
 
-<center>
+<div align="center">
   <img src="docs/resources/images/wiring.png" alt="System Wiring Overview" width="600" />
-</center>
-<p align="center"><strong><em>Figure 3:</em></strong> Wiring Diagram</p>
+  <p><b><em>Figure 3:</em></b> Wiring Diagram</p>
+</div>
 
 To ensure high-reliability operational conditions and eliminate loose wiring clusters on the vehicle, we designed a customized, compact PCB layout. 
 
 This dedicated board allows clean cable routing and enables seamless mechanical mounting straight onto each wheel segment of the training model framework.
 
-<center>
+<div align="center">
   <img src="docs/resources/images/pcb_design.png" alt="Custom PCB Design View" width="600" />
-</center>
-<p align="center"><strong><em>Figure 4:</em></strong> PCB Design View  </p>
+  <p><b><em>Figure 4:</em></b> PCB Design View</p>
+</div>
 
 ### 2.2. Software
 
