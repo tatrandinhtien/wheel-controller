@@ -20,11 +20,6 @@ This project was actively researched, developed, and validated within the **BOSC
 
 This specific repository hosts the complete source code, bare-metal peripheral drivers, and real-time scheduling logic for the **Wheel Controller Module**—the localized intelligent edge node deployed at each of the four wheel configurations.
 
-<div align="center">
-  <img src="docs/resources/images/hw_general_layout.png" alt="Hardware General Layout" width="600" />
-  <p><b><em>Figure 1:</em></b> Hardware General Layout of the Distributed System</p>
-</div>
-
 ## 2. General Layout
 
 ### 2.1. Hardware
