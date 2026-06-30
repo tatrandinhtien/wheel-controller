@@ -29,29 +29,6 @@ This specific repository hosts the complete source code, bare-metal peripheral d
 
 ### 2.1. Hardware
 
-The Wheel Controller Module operates as a localized intelligent actuator node dedicated to each wheel assembly. 
-
-Its core hardware execution tasks include driving the steering RC servo, regulating the DC bridge motor, decoding high-resolution quadrature encoder signals for closed-loop feedback, and maintaining robust communication across the shared bxCAN bus network.
-
-<div align="center">
-  <img src="docs/resources/images/hardware_components.png" alt="Hardware Components Overview" width="600" />
-  <p><b><em>Figure 2:</em></b> Components Overview</p>
-</div>
-
-<div align="center">
-  <img src="docs/resources/images/wiring.png" alt="System Wiring Overview" width="600" />
-  <p><b><em>Figure 3:</em></b> Wiring Diagram</p>
-</div>
-
-To ensure high-reliability operational conditions and eliminate loose wiring clusters on the vehicle, we designed a customized, compact PCB layout. 
-
-This dedicated board allows clean cable routing and enables seamless mechanical mounting straight onto each wheel segment of the training model framework.
-
-<div align="center">
-  <img src="docs/resources/images/pcb_design.png" alt="Custom PCB Design View" width="600" />
-  <p><b><em>Figure 4:</em></b> PCB Design View</p>
-</div>
-
 ### 2.2. Software
 
 ## 3. Coding Rules
